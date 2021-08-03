@@ -14,6 +14,12 @@ p{
 }
 
 
+
+h2,h3{
+    font-family: 'Poppins', sans-serif; 
+}
+
+
 header{
     background-color: black;
 
@@ -62,7 +68,7 @@ nav{
     display: none;
     justify-content: center;
 }
-ul{
+header ul{
     display: flex;
     flex-wrap: wrap;
 
@@ -72,7 +78,7 @@ div.barra nav ul li{
     margin-left: 15px;
     margin-top: 0px;
 }
-li {
+header li {
     font-size: 0.5rem;
     color: white;
     font-family: 'Poppins', sans-serif; 
@@ -82,11 +88,82 @@ li {
     align-self: center;
     justify-content: center;
 }
+
 .inicio-sesion{
     display: none;
     position: absolute;
     top: 0 px;
     right: 10px;
+}
+.slider{
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    
+}
+.slider img{
+    width: 100%;
+}
+.boton-derecho {
+position: absolute;
+right: 18px;
+}
+.slider i{
+    position: absolute;
+}
+.productos-disponibles img{
+    width: 100%;
+}
+.productos-disponibles {
+    display: flex;
+    flex-wrap: wrap;
+}
+.productos-disponibles article{
+    padding: 20px;
+    position: relative;
+}
+.destacados article{
+    padding: 20px;
+    position: relative;
+}
+.destacados {
+    display: flex;
+    flex-wrap: wrap;
+}
+.destacados img{
+    width: 100%;
+}
+.borra-espacio{
+    position: relative;
+    bottom: 0;   
+    width: 100%;
+    margin-right: 40px;
+}
+.productos-disponibles p{
+    text-align: center;
+    background-color: rgb(233, 227, 227);
+    
+    border-bottom: gray solid 4px;
+}
+.destacados p{
+    text-align: center;
+    background-color: rgb(233, 227, 227);
+    
+    border-bottom: gray solid 4px;
+}
+footer ul{
+    list-style-type: none;
+}
+
+footer li{
+    color: gray;
+    font-size: 1rem;
+    
+
+}   
+footer{
+    font-family: 'Poppins', sans-serif; 
 }
 
 
