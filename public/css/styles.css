@@ -22,6 +22,11 @@ h2,h3{
 
 header{
     background-color: black;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top:0
+
 
     
     
@@ -31,6 +36,7 @@ header div.top-header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     
 }
 header div.top-header img{
@@ -100,6 +106,7 @@ header li {
     display: flex;
     text-align: center;
     align-items: center;
+    margin-top: 41px;
     
 }
 .slider img{
@@ -184,6 +191,8 @@ footer{
         
         
     }
+    .slider{
+        margin-top: 88px;    }
     h1{
         align-self: flex-start;
 
