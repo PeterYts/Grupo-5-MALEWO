@@ -1,0 +1,43 @@
+ .foto-producto-compra {
+    width: 80px;
+    height: 80px;
+    margin-left: 60px;
+}
+.resumen-compra {
+    background-color: #DADDD9;
+    width: 250px;
+}
+
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
+.style-bar1 {
+    height: 1px;
+    background: black;
+    display: inline-block;
+    width: 54%;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+button {
+    margin-top: 30px;
+
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    align-self: center;
+}
+
