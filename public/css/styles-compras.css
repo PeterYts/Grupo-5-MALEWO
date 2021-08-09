@@ -14,7 +14,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+main{
+    margin-top: 95px;
+}
 .main-title {
     display: flex;
     flex-direction: row;
