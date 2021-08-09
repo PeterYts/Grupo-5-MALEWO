@@ -28,11 +28,12 @@ header{
 }
 
 .header-social-icons{
-    display: flex;
+    display: none;
     justify-content: flex-end;
     right: 20px;
     position: absolute;
     top: 0px
+    
 }
 
 header .header-social-icons i {
@@ -166,7 +167,7 @@ header li {
     display: flex;
     text-align: center;
     align-items: center;
-    margin-top: 41px;
+    margin-top: 0px;
     
 }
 .slider img{
@@ -178,6 +179,8 @@ right: 18px;
 }
 .slider i{
     position: absolute;
+    color: wheat;
+    opacity: 85%;
 }
 .productos-disponibles img{
     width: 100%;
@@ -211,7 +214,7 @@ right: 18px;
     bottom:33px;    
     border-bottom: gray solid 4px;
 }
-.productos-disponibles .a1 .p1{
+/* .productos-disponibles .a1 .p1{
     opacity: 0;
     transition: all 450ms;
 }
@@ -236,21 +239,29 @@ right: 18px;
 
 .productos-disponibles .a3:hover .p3{
     opacity: 70%;
-}
+} */
 .destacados p{
     text-align: center;
     background-color: rgb(233, 227, 227);
     position: relative;
-    transition: all 450ms;
+    /* transition: all 450ms; */
     bottom: 33px;
-    opacity: 0;
+    /* opacity: 0; */
     border-bottom: gray solid 4px;
 }
-.destacados article:hover p{
+/* .destacados article:hover p{
     opacity: 70%;
 
 
+} */
+article img {
+    transition: box-shadow 450ms;
 }
+article:hover img{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+
+
 
 footer {
     display: flex;
@@ -303,6 +314,9 @@ footer {
     nav{
         display: flex;
 
+    }
+    .header-social-icons{
+        display: flex;
     }
     header div.top-header{
         justify-content: center;
