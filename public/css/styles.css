@@ -9,8 +9,8 @@ h1{
     color: white;
     text-align: center;
     position: relative;
-    top: -20px;
-    font-size: 45px;
+    top: 0px;
+    font-size: 39px;
 }
 
 p{
@@ -30,7 +30,9 @@ header{
 .header-social-icons{
     display: flex;
     justify-content: flex-end;
-    margin-right: 15px;
+    right: 20px;
+    position: absolute;
+    top: 0px
 }
 
 header .header-social-icons i {
@@ -53,7 +55,7 @@ header div.top-header{
 
 header .top-header img{
     display: none;
-    padding: 5px 0px 5px 0px;
+    padding: 5px;
     width: 80px;
     position:absolute;
     left: 1%;
@@ -61,18 +63,22 @@ header .top-header img{
 }
 
 header div.top-header div.carrito{
-    align-self: flex-start;        
+    align-self: center;       
+    position: relative; 
 }
 
 header div.top-header .carrito i{
     font-size: 14px;
     color: white;
-    padding: 10px;
+    padding: 0px 5px;
+    position: relative;
+    top: 10px;
 }
 
 header div.top-header div.burger{
     order: -1;
-    padding: 10px;
+    padding: 5px 10px;
+    align-self: flex-end;
 }
 
 header div.top-header div.burger i{
@@ -191,10 +197,12 @@ right: 18px;
 .destacados {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 .destacados img{
     width: 100%;
 }
+
 
 .productos-disponibles p{
     text-align: center;
@@ -232,8 +240,16 @@ right: 18px;
 .destacados p{
     text-align: center;
     background-color: rgb(233, 227, 227);
-    
+    position: relative;
+    transition: all 450ms;
+    bottom: 33px;
+    opacity: 0;
     border-bottom: gray solid 4px;
+}
+.destacados article:hover p{
+    opacity: 70%;
+
+
 }
 
 footer {
@@ -290,7 +306,7 @@ footer {
     }
     header div.top-header{
         justify-content: center;
-        padding: 15px;
+        padding: 0;
     }
     header div.top-header div.burger{
         display: none;
