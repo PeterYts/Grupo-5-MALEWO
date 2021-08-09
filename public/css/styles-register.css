@@ -1,7 +1,10 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    
+    margin: 0px;
+}
+
+body {
+    background-color: #F8F8F4;
 }
 
 h1{
@@ -57,7 +60,7 @@ header .top-header img{
     width: 80px;
     position:absolute;
     left: 1%;
-    top:10px;
+    top:22px;
 }
 
 header div.top-header div.carrito{
@@ -155,63 +158,58 @@ header li {
     padding-left: 0px;
 }
 
-.slider{
-    position: relative;
+
+main {
     display: flex;
-    text-align: center;
-    align-items: center;
-    margin-top: 41px;
-    
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-.slider img{
-    width: 100%;
-}
-.boton-derecho {
-position: absolute;
-right: 18px;
-}
-.slider i{
-    position: absolute;
-}
-.productos-disponibles img{
-    width: 100%;
-}
-.productos-disponibles {
+
+.main-title {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-.productos-disponibles article{
-    padding: 20px;
-    position: relative;
+
+.style-bar1 {
+    height: 1px;
+    background: black;
+    display: inline-block;
+    width: 54%;
+    margin-top: 20px;
+    margin-left: 5px;
 }
-.destacados article{
-    padding: 20px;
-    position: relative;
-}
-.destacados {
+
+.form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-.destacados img{
-    width: 100%;
+
+label {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    color: #8B8D8A;
+    font-family: 'Poppins', sans-serif;
 }
-.borra-espacio{
-    position: relative;
-    bottom: 0;   
-    width: 100%;
-    margin-right: 40px;
+
+input {
+    border: solid 2px #DADDD9;
+    height: 40px;
 }
-.productos-disponibles p{
-    text-align: center;
-    background-color: rgb(233, 227, 227);
-    
-    border-bottom: gray solid 4px;
-}
-.destacados p{
-    text-align: center;
-    background-color: rgb(233, 227, 227);
-    
-    border-bottom: gray solid 4px;
+
+button {
+    margin-top: 30px;
+    width: 35%;
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    align-self: center;
 }
 
 footer {
@@ -260,7 +258,6 @@ footer {
     margin-left: 10%;
 }
 
-
 @media(min-width: 542px){
     nav{
         display: flex;
@@ -289,9 +286,25 @@ footer {
     .inicio-sesion{
         display: flex;
     }
+
+
 }
 
 @media (min-width: 1000px) {
+    .style-bar1 {
+        width: 85%;
+    }
+    main {
+        margin-top: 55px;
+    }
+    .form-section {
+        width: 55%;
+        align-self: center;
+    }
+    button {
+        width: 30%;
+        height: 40px;
+    }
     .style-bar2 {
         margin-left: 12%;
         margin-right: 12%;
