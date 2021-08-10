@@ -1,0 +1,322 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+li {
+    font-family: 'Poppins', sans-serif; 
+    list-style: none;
+}
+
+h1{
+    font-family: 'Antonio', sans-serif;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    font-size: 39px;
+}
+
+p{
+    font-family: 'Poppins', sans-serif; 
+}
+
+h2, h3, h4{
+    font-family: 'Poppins', sans-serif; 
+}
+
+h3 {
+    background-color: black;
+    color: #F8F8F4;
+    padding-left: 2px;
+    width: 100%;
+}
+
+header{
+    background-color: black;
+    width: 100%;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    position: fixed;
+}
+
+.header-social-icons{
+    display: none;
+    justify-content: flex-end;
+    right: 20px;
+    position: absolute;
+    top: 0px
+    
+}
+
+header .header-social-icons i {
+    color: #FFFFFF;
+    margin-left: 7px;
+    margin-top: 7px;
+    font-size: 1rem;
+}
+
+.fa-facebook-square {
+    margin-left: 10px;
+}
+
+header div.top-header{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.logo-img{
+    display: none;
+}
+header .top-header img{
+    display: none;
+    padding: 5px;
+    width: 80px;
+    position:absolute;
+    left: 1%;
+    top:10px;
+}
+
+header div.top-header div.carrito{
+    align-self: center;       
+    position: relative; 
+}
+
+header div.top-header .carrito i{
+    font-size: 14px;
+    color: white;
+    padding: 0px 9px;
+    position: relative;
+    top: 10px;
+}
+
+header div.top-header div.burger{
+    order: -1;
+    padding: 5px 10px;
+    align-self: flex-end;
+}
+
+header div.top-header div.burger i{
+    color: white;
+    font-size: 1rem;
+    
+}
+
+.inicio-sesion ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+.inicio-sesion ul li a:hover{
+    text-decoration: underline;
+}
+
+.inicio-sesion ul li {
+    margin-right: 10px;
+}
+
+.header-icon {
+    font-size: 1rem;
+}
+
+.fa-user-circle {
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+nav{
+    display: none;
+    justify-content: center;
+    position: relative;
+    top: 14px;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+div.barra nav ul li a{
+    font-size: 1rem;
+    margin-left: 30px;
+    margin-top: 0px;
+    font-weight: 100;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+div.barra nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.a-inicio {
+    margin-left: 0px !important;
+}
+
+.nav-ul {
+    padding-left: 0px;
+}
+
+header li {
+    font-size: 0.5rem;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    display: flex;
+    margin-left: 5px;
+}
+
+.barra-links{
+    align-self: center;
+    justify-content: center;
+}
+
+.inicio-sesion{
+    display: none;
+    position: absolute;
+    top: 0 px;
+    right: 10px;
+}
+
+.login-ul {
+    padding-left: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+main section {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+main section article {
+    margin-top: 20px;
+}
+
+.support-img {
+    display: none;
+}
+
+.main-img {
+    width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.img {
+    width: 50px;
+}
+
+.description {
+    margin-top: 10px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    margin-bottom: 20px;
+    justify-content: center
+}
+
+.style-bar2 {
+    height: 1px;
+    background: black;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.footer-icons {
+    align-self: flex-end;
+    margin-right: 12%;
+    margin-top: 5px;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.footer-list {
+    color: #8B8D8A;
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.contact-header {
+    display: inline-block;
+}
+
+.contacto {
+    margin-left: 20px;
+}
+
+.casa-malewo {
+    margin-left: 10%;
+}
+
+@media(min-width: 542px){
+    .logo-img{
+        display:block
+    }
+    nav{
+        display: flex;
+    }
+    .header-social-icons{
+        display: flex;
+    }
+    header div.top-header{
+        justify-content: center;
+        padding: 0;
+    }
+    header div.top-header div.burger{
+        display: none;
+    }
+    header div.top-header img{
+        display: flex;
+        
+    }
+    h1{
+        align-self: flex-start;
+    }
+    header div.top-header div.carrito  {display: none;
+    }
+    .inicio-sesion{
+        display: flex;
+    }
+}
+
+@media(min-width: 1000px){
+    .style-bar2 {
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+    .titulo{
+        padding: 0 15% 5%;
+    }
+    .article{
+        padding: 17px;
+    }
+    .destacados{
+        padding: 0 15%;
+    }
+    .footer-icons {
+        margin-right: 12.5%;
+    }
+    .contacto {
+        margin-left: 10%;
+    }
+    .casa-malewo {
+        margin-left: 14%;
+    }
+}
