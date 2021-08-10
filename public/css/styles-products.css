@@ -38,9 +38,18 @@ a:hover{
 
 }
 .filtros{
-    padding: 5%
+    padding: 5%;
+    display:flex;
+    justify-content: flex-end;
     
 
+}
+.filtros img{
+    position: relative;
+    margin-left: 8px ;
+    width: 20px;
+    padding-top: 1px;
+    
 }
 .title-line-grey{
     overflow: hidden;
