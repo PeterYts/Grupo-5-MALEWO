@@ -1,18 +1,27 @@
  .foto-producto-compra {
     width: 80px;
     height: 80px;
-    margin-left: 60px;
+    margin-left: 20%;
+}
+.producto-compra {
+    display: flex;
+    width: 40%;
+    height: fit-content;
+    border: 1px solid black;
 }
 .resumen-compra {
     background-color: #DADDD9;
-    width: 250px;
+    width: 180px;
+    margin-right: 20%;
 }
+
 
 
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 main{
     margin-top: 95px;
@@ -43,3 +52,18 @@ button {
     align-self: center;
 }
 
+ .precio, .cantidadU {
+text-align: center;
+font-size: 12px;
+ }
+
+ .subtotal , .total {
+     font-size: 12px;
+     font-weight: bold;
+
+ }
+
+ .subtotal-numero , .total-numero {
+     font-size: 10px;
+     font-weight: bolder;
+ }
