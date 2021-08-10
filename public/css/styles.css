@@ -5,6 +5,7 @@
 }
 li {
     font-family: 'Poppins', sans-serif; 
+    list-style: none;
 }
 
 h1{
@@ -60,7 +61,9 @@ header div.top-header{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.logo-img{
+    display: none;
+}
 header .top-header img{
     display: none;
     padding: 5px;
@@ -101,6 +104,9 @@ header div.top-header div.burger i{
     font-weight: 100;
     font-size: 0.8rem;
 }
+.inicio-sesion ul li a:hover{
+    text-decoration: underline;
+}
 
 .inicio-sesion ul li {
     margin-right: 10px;
@@ -135,6 +141,9 @@ div.barra nav ul li a{
     font-weight: 100;
     color: #FFFFFF;
     text-decoration: none;
+}
+div.barra nav ul li a:hover{
+    text-decoration: underline;
 }
 
 .a-inicio {
@@ -187,12 +196,13 @@ header li {
 }
 .boton-derecho {
 position: relative;
-right: 18px;
+right: 27px;
 }
 .slider i{
     position: absolute;
     color: wheat;
     opacity: 85%;
+    font-size: 1.5rem;
 }
 .productos-disponibles img{
     width: 100%;
@@ -205,6 +215,7 @@ right: 18px;
     padding: 20px;
     position: relative;
 }
+
 .destacados article{
     padding: 20px;
     position: relative;
@@ -280,11 +291,17 @@ right: 18px;
 
 
 } */
-article img {
+article img{
+    transition: box-shadow 450ms;
+}
+article p{
     transition: box-shadow 450ms;
 }
 article:hover img{
     box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+article:hover p{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 
@@ -337,6 +354,9 @@ footer {
 
 
 @media(min-width: 542px){
+    .logo-img{
+        display:block
+    }
     nav{
         display: flex;
 
@@ -386,10 +406,35 @@ footer {
     }
 }
 
-@media (min-width: 1000px) {
+@media(min-width: 1000px){
     .style-bar2 {
         margin-left: 12%;
         margin-right: 12%;
+    }
+    .slider{
+        padding: 40px 15% 0 15%;
+    }
+    .slider i{
+        font-size: 3rem;
+    }
+    .boton-derecho{
+        right: 58px;
+    }
+    .boton-izq{
+        left: 13px;
+    }
+    .titulo{
+        padding: 0 15% 5%;
+    }
+    .productos-disponibles {
+        padding: 5% 14%;
+
+    }
+    .article{
+        padding: 17px;
+    }
+    .destacados{
+        padding: 0 15%;
     }
     .footer-icons {
         margin-right: 12.5%;
