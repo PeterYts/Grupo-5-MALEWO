@@ -174,7 +174,7 @@ header li {
     display: flex;
     text-align: center;
     align-items: center;
-    margin-top: 95px;
+    margin-top: 70px;
 
     
 }
@@ -359,6 +359,7 @@ footer {
     
     .slider {
         padding: 40px 10% 0 10%;
+        margin-top: 95px;
     }
     h1{
         align-self: flex-start;
