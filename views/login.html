@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="/css/styles-login.css ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Poppins:wght@300;700&display=swap"  rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
     <title>Login</title>
 </head>
 <body>
@@ -20,10 +21,16 @@
             <i class="fab fa-facebook-square"></i>
         </div>
         <div class="top-header">
-            <img src="img\logo.jpg" alt="logo">
-            <h1>CASA MALEWO</h1>
+            <a class="logo-img" href="/" style="text-decoration: none;">
+                <img src="img\logo.jpg" alt="logo">
+                </a>
+            <a href="/" style="text-decoration: none;">
+                <h1>CASA MALEWO</h1>
+            </a>
             <div class="carrito">
-                <i class="fas fa-shopping-bag"></i>
+                <a href="/compras">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
             </div>
             <div class="burger">
                 <i class="fas fa-bars"></i>
@@ -32,7 +39,11 @@
         <div class="inicio-sesion">
             <ul class="login-ul">
                 <li>
-                    <i class="fas fa-shopping-bag header-icon"></i>
+                    <i class="far fa-user-circle header-icon"></i>
+                    <a href="/login"> INICIAR SESIÓN</a>
+                </li>
+                <li>
+                    <a href="/compras"><i class="fas fa-shopping-bag header-icon"></i></a>
                 </li>>
             </ul>
         </div>

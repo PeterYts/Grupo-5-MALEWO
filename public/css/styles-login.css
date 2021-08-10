@@ -41,7 +41,7 @@ input {
     height: 40px;
 }
 
-a {
+.form a {
     align-self: center;
     font-family: 'Poppins', sans-serif;
     color: #8B8D8A;

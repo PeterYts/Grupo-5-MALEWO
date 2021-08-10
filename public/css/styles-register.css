@@ -63,7 +63,9 @@ header div.top-header{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.logo-img{
+    display: none;
+}
 header .top-header img{
     display: none;
     padding: 5px;
@@ -271,6 +273,9 @@ footer {
 }
 
 @media(min-width: 542px){
+    .logo-img{
+        display:block
+    }
     nav{
         display: flex;
     }
