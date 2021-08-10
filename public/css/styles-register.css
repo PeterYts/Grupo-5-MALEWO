@@ -6,13 +6,16 @@
 body {
     background-color: #F8F8F4;
 }
+li{
+    font-family: 'Poppins', sans-serif; 
+}
 
 h1{
     font-family: 'Antonio', sans-serif;
     color: white;
     text-align: center;
     position: relative;
-    top: 0px;
+    top: 0;
     font-size: 39px;
 }
 
@@ -63,14 +66,13 @@ header .top-header img{
     width: 80px;
     position:absolute;
     left: 1%;
-    top:20px;
+    top:10px;
 }
 
 header div.top-header div.carrito{
     align-self: center;       
     position: relative; 
 }
-
 header div.top-header .carrito i{
     font-size: 14px;
     color: white;
@@ -84,7 +86,6 @@ header div.top-header div.burger{
     padding: 5px 10px;
     align-self: flex-end;
 }
-
 header div.top-header div.burger i{
     color: white;
     font-size: 1rem;
@@ -269,9 +270,12 @@ footer {
     nav{
         display: flex;
     }
+    .header-social-icons{
+        display: flex;
+    }
     header div.top-header{
         justify-content: center;
-        padding: 15px;
+        padding: 0;
     }
     header div.top-header div.burger{
         display: none;
@@ -281,8 +285,6 @@ footer {
         
         
     }
-    .slider{
-        margin-top: 88px;    }
     h1{
         align-self: flex-start;
 
