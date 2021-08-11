@@ -29,3 +29,6 @@ app.get('/product', (req, res) => {
 app.get('/products', (req, res) => {
     res.sendFile(__dirname + '/views/products.html');
 });
+app.get('/compras-model', (req, res) => {
+    res.sendFile(__dirname + '/views/compras-model.html');
+});
