@@ -26,6 +26,9 @@
     margin-top: 30px;
     
 }
+.nombre-producto {
+    display: none;
+}
 
 /*.producto{
     justify-content: space-between;
@@ -37,9 +40,18 @@
     margin-right: 10px;
 }
 .producto img{
-    margin-top: 30px;
-    width: 25%;
-    height: 25%;
+   width: 100%;
+}
+.item-carro {
+    width: 33%;
+}
+.item-carro p{
+    text-align: center;
+    background-color: rgb(233, 227, 227);
+    position: relative;
+    bottom: 24px;  
+    border-bottom: gray solid 4px;
+    width: 100%;
 }
 /*.producto .precio-cantidad{
     margin: 10%;
@@ -50,6 +62,7 @@
     text-align: center;
     position: relative;
     right: 0px;
+    padding: 10px;
 }
 .precioU{
     font-weight: bold;
@@ -106,7 +119,8 @@
     color: white;
     font-weight: 100;
 }
- @media (min-width: 768px) {
+
+ @media (min-width: 542px) {
     .producto img{
         margin-top: 30px;
         margin-left: 20px;
@@ -134,6 +148,9 @@
      }
      .precio-cantidad {
          margin-left: 130px;
+     }
+     .nombre-producto {
+         display: block;
      }
  }
 /* @media (min-width: 460px){
