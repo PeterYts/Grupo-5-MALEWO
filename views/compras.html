@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles-compras-model.css">
     <link rel="stylesheet" href="/css/styles.css ">
-    <link rel="stylesheet" href="/css/styles-compras.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Poppins:wght@300;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <title>MALEWO || Compras</title>
 
+    <title>MALEWO || Home</title>
 </head>
 
 <body>
-
     <header>
 
         <div class="top-header">
@@ -28,13 +29,14 @@
             </div>
             <a class="logo-img" href="/" style="text-decoration: none;">
                 <img src="img\logo.jpg" alt="logo">
-                </a>
+            </a>
             <a href="/" style="text-decoration: none;">
-            <h1>CASA MALEWO</h1>
+                <h1>CASA MALEWO</h1>
             </a>
-            <div class="carrito"><a href="/compras">
-                <i class="fas fa-shopping-bag"></i>
-            </a>
+            <div class="carrito">
+                <a href="/compras">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
             </div>
             <div class="burger">
                 <i class="fas fa-bars"></i>
@@ -47,7 +49,7 @@
                     <a href="/login"> INICIAR SESIÓN</a>
                 </li>
                 <li>
-                    <i class="fas fa-shopping-bag header-icon"></i>
+                    <a href="/compras"><i class="fas fa-shopping-bag header-icon"></i></a>
                 </li>>
             </ul>
         </div>
@@ -70,48 +72,63 @@
             </nav>
         </div>
     </header>
+    <main style="margin-top: 95px;">
 
-    <main>
-        <section class="main-title">
-            <h3 class="create-account">MI COMPRA</h3>
-            <div class="style-bar1"></div>
+        <section class="titulo">
+            <h2 class="title-line">MI COMPRA </h2>
         </section>
-
-        <section class="contenedor">
-            <article class="producto-compra">
-                <img class="foto-producto-compra" src="img/interior/Screenshot_10.png" alt="foto-producto-compra">
-                <p class="nombre-producto">NOMBRE DEL PRODICTO</p>
-            </article>
-
-            <div>
-                <p class="precio-unitario">PRECIO UNITARIO</p>
-                <p class="precio">$2300</p>
-            </div>
-            <div>
-                <p class="cantidad">CANTIDAD</p>
-                <p class="cantidadU">1</p>
-            </div>
-
-            <section>
-                <div class="resumen-compra">
-                    <p>RESUMEN DE COMPRA</p>
-                    <div class="style-bar1"></div>
-                    <div>
-                        <P class="subtotal">SUBTOTAL</P>
-                        <p class="subtotal-numero">$2300</p>
-                    </div>
-                    <div>
-                        <P class="total">TOTAL</P>
-                        <p class="total-numero">$2300</p>
+        <h2 class="title-line-grey"></h2>
+        <section class="compra">
+            <div class="producto">
+                <div class="product-name-icon">
+                    <img src="img\productos\8.jpg" alt="">
+                    <p class="nombre-producto">nombre del producto</p>
+                    <div class="cross">
+                        <i id="cross" class="fas fa-times"></i>
                     </div>
                 </div>
-                <button class="finalizar-compra">FINALIZAR COMPRA</button>
+                <div class="precio-cantidad">
+                    <p>PRECIO UNITARIO</p>
+                    <p class="precioU" style="margin-bottom: 15px;">$1.500</p>
+
+                    <p>CANTIDAD</p>
+                    <i class="fas fa-minus-circle"></i>
+                    <input type="number" name="quantity[595099420]" data-item-id="595099420" value="1"
+                        class="js-cart-quantity-input cart-item-input form-control">
+                    <i class="fas fa-plus-circle"></i>
+
+                </div>
+            </div>
+            <h2 class="title-line-grey"></h2>
+            <section class="shop-box">
+                <div class="resumen">
+                    <div class="resumen-de-compras">
+                        <h3>RESUMEN DE COMPRA</h3>
+                        <section class="titulo" style="padding-top: 0px;">
+                            <h2 class="title-line"></h2>
+                        </section>
+                        <div class="suma-productos">
+                            <div class="totales">
+                                <p>subtotal</p>
+                                <p>$1.500,00</p>
+                            </div>
+                            <div class="totales" style="margin-bottom: 53px;">
+                                <p style="font-weight: bold;">TOTAL</p>
+                                <p>$1.500,00</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="finalizar">
+                    <h3>FINALIZAR COMPRA </h3>
+                </div>
             </section>
         </section>
-
-
-
     </main>
+
+
+
     <footer>
         <section>
             <div class="style-bar2"></div>
