@@ -35,3 +35,7 @@ app.get('/compras-model', (req, res) => {
 app.get('/quienes-somos', (req, res) => {
     res.sendFile(__dirname + '/views/quienes-somos.html');
 });
+
+app.get('/blog', (req, res) => {
+    res.sendFile(__dirname + '/views/blog.html');
+});
