@@ -14,15 +14,19 @@
 }
 .product-name-icon{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .nombre-producto .precio-cantidad {
     font-size: 14px;
+}
+#cross{
+    display: none   ;
 }
 .nombre-producto , #cross{
     margin-top: 30px;
     
 }
+
 /*.producto{
     justify-content: space-between;
     display: flex;
@@ -41,11 +45,7 @@
     margin: 10%;
     
 }*/
-.precio-cantidad{
-    position: relative;
-    
-    margin-left: 60px;
-}
+
 .precio-cantidad {
     text-align: center;
     position: relative;
@@ -121,6 +121,9 @@
      }
      .shop-box {
          width: 30%;
+     }
+     #cross{
+         display: block;
      }
      .title-line-grey:after{
         content:'';
