@@ -176,7 +176,7 @@ header li {
 main {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 79px;
     justify-content: center;
     margin-bottom: 20px;
 }
@@ -279,6 +279,9 @@ footer {
     nav{
         display: flex;
     }
+    main {
+        margin-top: 155px;
+    }
     .header-social-icons{
         display: flex;
     }
@@ -312,9 +315,7 @@ footer {
     .style-bar1 {
         width: 85%;
     }
-    main {
-        margin-top: 55px;
-    }
+    
     .form-section {
         width: 55%;
         align-self: center;
