@@ -207,22 +207,54 @@ main section article {
 
 .main-img {
     width: 100%;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
-}
-
-.img {
-    width: 50px;
+    /*box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;*/
 }
 
 .description {
     margin-top: 10px;
     text-align: center;
+    border-bottom: solid #DADDD9 1px;
+    padding-bottom: 5px;
+}
+
+.price {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', sans-serif; 
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form button {
+    background-color: black;
+    color: white;
+}
+
+.img-offer {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 50%;
+    transition: border 3s;
+}
+
+.img:hover {
+    border: solid black 1px;
 }
 
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 160px;
+    margin-top: 10px;
     margin-bottom: 20px;
     justify-content: center
 }
@@ -251,6 +283,7 @@ footer {
     color: #8B8D8A;
     list-style-type: none;
     padding-left: 5px;
+    font-size: 13px;
 }
 
 .contact-header {
@@ -296,7 +329,63 @@ footer {
     }
 }
 
-@media(min-width: 1000px){
+@media(min-width: 938px){
+    main{
+        margin-top: 160px;
+    }
+    form {
+        margin-bottom: 0px;
+    }
+    .support-img {
+        display: inline-block;
+        width: 20%;
+    }
+    .support-img-ind {
+        height: 49.5%;
+        width: 100%;
+    }
+    .main-img-article {
+        width: 30%;
+    }
+    .main-img {
+        width: 100%;
+        height: 100%;
+    }
+    .info-buy-article {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+    .description {
+        text-align: left;
+        margin-top: 20px;
+    }
+    .quantity {
+        display: flex;
+        flex-direction: column;
+    }
+    .secondary-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .offers {
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+    .img-offer {
+
+    }
+    .img {
+        width: 25%;
+    }
     .style-bar2 {
         margin-left: 12%;
         margin-right: 12%;
