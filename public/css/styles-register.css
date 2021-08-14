@@ -40,7 +40,10 @@ header{
     right: 20px;
     position: absolute;
     top: 0px
-    
+}
+
+.icon-link-header {
+    color: white;
 }
 
 header .header-social-icons i {
@@ -231,6 +234,13 @@ footer {
     justify-content: center
 }
 
+footer section p {
+    color: #8B8D8A;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-left: 14%;
+}
+
 .style-bar2 {
     height: 1px;
     background: black;
@@ -242,6 +252,10 @@ footer {
     align-self: flex-end;
     margin-right: 12%;
     margin-top: 5px;
+}
+
+.icon-link-footer {
+    color: black;
 }
 
 .footer-info {
