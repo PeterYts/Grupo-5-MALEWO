@@ -39,3 +39,7 @@ app.get('/info', (req, res) => {
 app.get('/blog', (req, res) => {
     res.sendFile(__dirname + '/views/blog.html');
 });
+
+app.get('/opcion-productos', (req, res) => {
+    res.sendFile(__dirname + '/views/opcion-productos.html');
+});
