@@ -1,7 +1,9 @@
 .carrito-de-compras{
     padding-left: 10%;
 }
-
+main{
+    position: relative;
+}
 .title-line-grey{
     overflow: hidden;
 }
@@ -45,6 +47,9 @@
 .item-carro {
     width: 33%;
 }
+.item-carro h4{
+    display: none;
+}
 .item-carro p{
     text-align: center;
     background-color: rgb(233, 227, 227);
@@ -75,11 +80,15 @@
     text-align: center;
 }
 .shop-box{
-    margin:20px
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 .resumen{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .resumen-de-compras{
     
@@ -110,7 +119,7 @@
     margin: 20px;
     margin-left: 50px;
     margin-right: 50px;
-
+    width: 100%;
     
 }
 
@@ -124,14 +133,40 @@
     .producto img{
         margin-top: 30px;
         margin-left: 20px;
-        width: 25%;
-        height: 25%;
+        width: 179px;
+        padding: 10;
     }
+    .item-carro h4{
+        display: block;
+        margin-left: 20px;
+        color: grey;
+    }
+    .item-carro p {
+        display: none;
+
+
+    }
+    .lista-compras{
+        margin-left: 40px;
+    }
+
+    .resumen-de-compras {
+        width: 268px;
+    }
+    .finalizar{
+        width: 182px;
+    }
+    .item-carro{
+        display: flex;
+        align-items: center;
+        width: 44%;
+    }
+    
     .compra{
         display: flex;
     }
      .producto {
-         width: 70%;
+         width: 100%;
      }
      .shop-box {
          width: 30%;
@@ -142,19 +177,26 @@
      .title-line-grey:after{
         content:'';
         display:inline-block;
-        width:65%; height:100%;
+        width:80%; height:100%;
         margin-right:-100%;
         border-bottom:1px solid rgb(189, 189, 189);
      }
      .precio-cantidad {
-         margin-left: 130px;
+         margin-left: 30px;
+         display: flex;
+
+     }
+     .precio-cantidad p {
+         margin-left: 20px;
      }
      .nombre-producto {
          display: block;
      }
  }
-/* @media (min-width: 460px){
+@media (min-width: 1000px){
      .precio-cantidad {
-         margin-left: 50px;
+         margin-left: 130px;
      }
- }*/
+     }
+ 
+

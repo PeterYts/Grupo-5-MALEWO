@@ -3,9 +3,6 @@
     margin: 0px;
 }
 
-body {
-    background-color: #F8F8F4;
-}
 li{
     font-family: 'Poppins', sans-serif; 
 }
@@ -43,7 +40,10 @@ header{
     right: 20px;
     position: absolute;
     top: 0px
-    
+}
+
+.icon-link-header {
+    color: white;
 }
 
 header .header-social-icons i {
@@ -176,7 +176,7 @@ header li {
 main {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 79px;
     justify-content: center;
     margin-bottom: 20px;
 }
@@ -234,6 +234,13 @@ footer {
     justify-content: center
 }
 
+footer section p {
+    color: #8B8D8A;
+    font-size: 11px;
+    margin-top: 5px;
+    margin-left: 14%;
+}
+
 .style-bar2 {
     height: 1px;
     background: black;
@@ -247,6 +254,10 @@ footer {
     margin-top: 5px;
 }
 
+.icon-link-footer {
+    color: black;
+}
+
 .footer-info {
     display: flex;
     flex-wrap: wrap;
@@ -258,6 +269,7 @@ footer {
     color: #8B8D8A;
     list-style-type: none;
     padding-left: 5px;
+    font-size: 13px;
 }
 
 .contact-header {
@@ -278,6 +290,9 @@ footer {
     }
     nav{
         display: flex;
+    }
+    main {
+        margin-top: 155px;
     }
     .header-social-icons{
         display: flex;
@@ -312,9 +327,7 @@ footer {
     .style-bar1 {
         width: 85%;
     }
-    main {
-        margin-top: 55px;
-    }
+    
     .form-section {
         width: 55%;
         align-self: center;
