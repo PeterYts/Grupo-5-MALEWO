@@ -40,11 +40,11 @@ app.get('/blog', (req, res) => {
     res.sendFile(__dirname + '/views/blog.html');
 });
 
-<<<<<<< HEAD
 app.get('/opcion-productos', (req, res) => {
     res.sendFile(__dirname + '/views/opcion-productos.html');
-=======
+
+})
+
 app.get('/product-detail', (req, res) => {
     res.sendFile(__dirname + '/views/product-detail.html');
->>>>>>> d6778a597c9d92de3b1e506dc56b07aff3333abc
-});
+})
