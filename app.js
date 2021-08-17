@@ -41,6 +41,5 @@ app.get('/blog', (req, res) => {
 });
 
 
-app.get('/opcion-productos', (req, res) => {
-    res.sendFile(__dirname + '/views/opcion-productos.html');
-});
+
+
