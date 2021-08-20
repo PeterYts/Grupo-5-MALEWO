@@ -177,7 +177,7 @@ main{
      .title-line-grey:after{
         content:'';
         display:inline-block;
-        width:80%; height:100%;
+        width:70%; height:100%;
         margin-right:-100%;
         border-bottom:1px solid rgb(189, 189, 189);
      }
@@ -197,6 +197,9 @@ main{
      .precio-cantidad {
          margin-left: 130px;
      }
-     }
+     .title-line-grey:after {
+        width: 76%;
+    }
+}
  
 
