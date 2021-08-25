@@ -11,7 +11,7 @@ app.set("view engine", "ejs");
 
 app.use('/', users)
 app.use("/", indexRouter);
-app.use('/', product )
+app.use('/products', product )
 // app.use(app.router);
 // routes.initialize(app);
 
