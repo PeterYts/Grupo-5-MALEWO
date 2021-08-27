@@ -304,7 +304,7 @@ article img{
 article p{
     transition: box-shadow 450ms;
 }
-article:hover img{
+.article-hover:hover img{
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 article:hover p{

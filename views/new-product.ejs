@@ -1,0 +1,28 @@
+<%- include('./partials/head', { title:'Product', hojaCss:'styles-create-product'}) %>
+<%- include('./partials/header') %>
+    <main>
+        <section class="title-section">
+            <h2>Crear producto</h2>
+        </section>
+        <section class="form-section">
+            <form>
+                <label for="name">Nombre del producto</label>
+                <input type="text" name="ProductName" id="name">
+                <label for="description">Descripción</label>
+                <input type="text" name="ProductDesc" id="description">
+                <label for="img">Imagenes</label>
+                <input type="file" name="ProductImg" id="img" accept=".jpg, .png, .jpeg, .tif, .tiff" multiple class="file-input">
+                <label for="category">Categoría</label>
+                <input type="text" name="ProductCat" id="category">
+                <label for="color">Colores</label>
+                <input type="text" name="ProductColor" id="color">
+                <label for="price">Precio</label>
+                <input type="text" name="ProductPrice" id="price">
+                <button type="submit">Crear</button>
+            </form>
+        </section>
+    </main>
+<%- include('./partials/footer') %> 
+    <script src="../js/prueba.js"></script>
+</body>
+</html>
