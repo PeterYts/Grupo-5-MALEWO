@@ -1,17 +1,19 @@
 const express = require('express');
 const app = express();
-var path = require("path");
-app.use(express.static('public'));
-var users = require('./routes/users')
-var indexRouter = require("./routes");
-var product = require('./routes/product')
+const path = require("path");
+const users = require('./routes/users');
+const indexRouter = require("./routes");
+const productRouter = require('./routes/product');
+const methodOverride = require('method-override');
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-
-app.use('/', users)
+app.use(express.static('public'));
+app.use('/', users);
 app.use("/", indexRouter);
-app.use('/products', product )
+app.use('/products', productRouter );
+app.use(methodOverride('_method'));
 // app.use(app.router);
 // routes.initialize(app);
 

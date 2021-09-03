@@ -5,8 +5,17 @@ const productController = {
     create: (req,res) => {
         res.render('new-product');
     },
-    modify: (req, res) => {
-        res.render('modify-product')
+    edit: (req, res) => {
+        res.render('modify-product');
+    },
+    createProduct: (req, res) => {
+        
+    },
+    editProduct: (req, res) => {
+
+    },
+    deleteProduct: (req,res) => {
+
     }
 }
 module.exports = productController;
