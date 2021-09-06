@@ -9,13 +9,43 @@ const productController = {
         res.render('modify-product');
     },
     createProduct: (req, res) => {
-        
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let newProduct = req.body
+		newProduct['image'] = req.file.filename;
+		if (products.length === 0) {
+			newProduct['id'] = 1;
+			products.push(newProduct);
+		}else {
+			let lastProduct = products[products.length -1];
+			newProduct['id'] = lastProduct.id + 1;
+			products.push(newProduct);
+		}
+		let changeProduct = JSON.stringify(products, null, '  ');
+		fs.writeFileSync(productsFilePath, changeProduct);
+		res.redirect('/');
     },
     editProduct: (req, res) => {
-
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		products.forEach(obj => {
+			if (obj.id == req.params.id) {
+				obj.name = req.body.name;
+				obj.price = req.body.price;
+				obj.discount = req.body.discount;
+				obj.description = req.body.description;
+				obj.category = req.body.category;
+				obj.image = req.file.filename;
+			}
+		});
+		let changeProduct = JSON.stringify(products, null, '  ');
+		fs.writeFileSync(productsFilePath, changeProduct);
+		res.redirect('/products');
     },
     deleteProduct: (req,res) => {
-
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		products = products.filter(obj => (obj.id == req.params.id)? false : true);
+		let changeProduct = JSON.stringify(products, null, '  ');
+		fs.writeFileSync(productsFilePath, changeProduct);
+		res.redirect('/products');
     }
 }
 module.exports = productController;
