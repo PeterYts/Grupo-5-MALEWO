@@ -3,19 +3,17 @@
     <main>
         <section class="main-section">
             <article class="support-img">
-                <img src="/img/interior/maseta-para-interior-redondas.jpg" alt="support-img" class="support-img-ind">
-                <img src="/img/interior/maseta-para-interior-redondas.jpg" alt="support-img" class="support-img-ind">
+                <img src="/img/productos/<%= prod[0].Image %>" alt="support-img" class="support-img-ind">
+                <img src="/img/productos/<%= prod[0].Image %>" alt="support-img" class="support-img-ind">
             </article>
             <article class="main-img-article">
-                <img src="/img/interior/maseta-para-interior-redondas.jpg" alt="main-img" class="main-img">
+                <img src="/img/productos/<%= prod[0].Image %>" alt="main-img" class="main-img">
             </article>
             <article class="info-buy-article">
                 <div>
-                    <h3>Nombre del producto</h3>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, obcaecati? Necessitatibus hic magni beatae ullam quasi inventore, labore, harum consectetur quibusdam itaque error quae eaque?
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, beatae tempora tenetur eligendi ipsam vel animi. Eum voluptatem nam quae accusamus totam ab natus asperiores, debitis voluptas aspernatur earum praesentium!
-                    </p>
-                    <p class="price">$0.00</p>
+                    <h3><%= prod[0].Nombre %></h3>
+                    <p class="description"><%= prod[0].Descripcion %></p>
+                    <p class="price"><%= prod[0].Precio %></p>
                 </div>
                 <div>
                     <form>

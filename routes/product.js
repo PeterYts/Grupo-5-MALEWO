@@ -19,7 +19,7 @@ router.get('/', productController.index);
 router.get('/create', productController.create);
 router.post('/', upload.single('Image'), productController.createProduct);
 
-router.get('/:id', productController.product);
+router.get('/product/:id', productController.product);
 
 router.get('/:id/edit', productController.edit);
 router.put('/:id', upload.any(), productController.editProduct);

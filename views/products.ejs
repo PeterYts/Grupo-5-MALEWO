@@ -48,8 +48,8 @@
             <div class="lista-de-productos">
                 <% productList.forEach(prod => { %>
                 <article class="article-hover">
-                    <a href="/products/product/<%= prod.id %>"><img src="img/productos/<%= prod.Image %>" alt="maceta <%= prod.id %>"></a>
-                    <p>MACETA 1</p>
+                    <a href="/products/product/<%= prod.id %>"><img src="/img/productos/<%= prod.Image %>" alt="maceta <%= prod.id %>"></a>
+                    <p><%= prod.Nombre %> </p>
                 </article>
                 <% }) %>
             </div>
@@ -58,5 +58,7 @@
     </main>
 <%- include('./partials/footer') %> 
     <script src="../js/prueba.js"></script>
+    <script src="../js/filtro.js"></script>
+
 
 </body>
