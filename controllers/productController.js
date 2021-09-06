@@ -17,7 +17,9 @@ const productController = {
     createProduct: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let newProduct = req.body
+		console.log(req.body);
 		//newProduct['image'] = req.file.filename;
+		/*
 		if (products.length === 0) {
 			newProduct['id'] = 1;
 			products.push(newProduct);
@@ -26,9 +28,10 @@ const productController = {
 			newProduct['id'] = lastProduct.id + 1;
 			products.push(newProduct);
 		}
+		*/
 		let changeProduct = JSON.stringify(products, null, '  ');
 		fs.writeFileSync(productsFilePath, changeProduct);
-		res.redirect('/products');
+		res.redirect('/');
     },
     editProduct: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
