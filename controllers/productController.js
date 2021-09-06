@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const productsFilePath = path.join(__dirname, '../data/Products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
@@ -17,7 +17,7 @@ const productController = {
     createProduct: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		let newProduct = req.body
-		newProduct['image'] = req.file.filename;
+		//newProduct['image'] = req.file.filename;
 		if (products.length === 0) {
 			newProduct['id'] = 1;
 			products.push(newProduct);
@@ -28,7 +28,7 @@ const productController = {
 		}
 		let changeProduct = JSON.stringify(products, null, '  ');
 		fs.writeFileSync(productsFilePath, changeProduct);
-		res.redirect('/');
+		res.redirect('/products');
     },
     editProduct: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));

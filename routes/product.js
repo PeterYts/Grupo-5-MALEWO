@@ -12,10 +12,10 @@ const storage = multer.diskStorage({
   }
 });
   
-  const upload = multer({ storage: storage })
+const upload = multer({ storage: storage })
 
 router.get('/create', productController.create);
-router.post('/', upload.any(), productController.createProduct);
+router.post('/', productController.createProduct);
 
 router.get('/:id', productController.product);
 
