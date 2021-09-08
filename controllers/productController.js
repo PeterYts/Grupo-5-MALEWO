@@ -41,6 +41,7 @@ const productController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		products.forEach(obj => {
 			if (obj.id == req.params.id) {
+				
 				obj.name = req.body.name;
 				obj.price = req.body.price;
 				obj.discount = req.body.discount;
