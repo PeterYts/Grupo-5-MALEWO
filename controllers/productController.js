@@ -19,7 +19,9 @@ const productController = {
         res.render('new-product');
     },
     edit: (req, res) => {
-        res.render('modify-product');
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		let wantedProduct = products.filter(obj => obj.id == req.params.id);
+        res.render('modify-product', {wantedProduct: wantedProduct});
     },
     createProduct: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -42,14 +44,13 @@ const productController = {
 		products.forEach(obj => {
 			if (obj.id == req.params.id) {
 				
-				obj.nombre = req.body.nombre;
-				obj.precio = req.body.precio;				
-				obj.descripcion = req.body.descripcion;
-				obj.category = req.body.category;
-				obj.image = req.file.filename;
+				obj.Nombre = req.body.Nombre;
+				obj.Precio = req.body.Precio;				
+				obj.Descripcion = req.body.Descripcion;
+				obj.Category = req.body.Category;
+				obj.Image = req.file.filename;
 			}
 		});
-		console.log(products)
 		let changeProduct = JSON.stringify(products, null, '  ');
 		fs.writeFileSync(productsFilePath, changeProduct);
 		res.redirect('/products');

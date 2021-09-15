@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "Nombre": "Noccaea montana (L.) F.K. Mey. [excluded]",
-    "Descripcion": "Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero. Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.",
-    "Image": "1.jpg",
-    "Category": "Male",
-    "Precio": "$2.75"
+    "Nombre": "a",
+    "Descripcion": "a",
+    "Image": "Image-1631686316161-375611186.jpg",
+    "Category": "a",
+    "Precio": "a"
   },
   {
     "id": 2,
-    "Nombre": "Aesculus hippocastanum L.",
-    "Descripcion": "Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-    "Image": "2.png",
-    "Category": "Male",
-    "Precio": "$0.16"
+    "Nombre": "awda",
+    "Descripcion": "awda",
+    "Image": "Image-1631686369484-862770627.png",
+    "Category": "awda",
+    "Precio": "100"
   },
   {
     "id": 3,
@@ -167,5 +167,4 @@
     "Image": "Image-1631074573685-784237341.jpg",
     "id": 21
   }
-
 ]
