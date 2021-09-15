@@ -52,7 +52,7 @@ const productController = {
 		console.log(products)
 		let changeProduct = JSON.stringify(products, null, '  ');
 		fs.writeFileSync(productsFilePath, changeProduct);
-		res.redirect('/products');
+		res.redirect('/products/');
     },
     deleteProduct: (req,res) => {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
