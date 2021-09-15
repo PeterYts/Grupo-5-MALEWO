@@ -42,14 +42,14 @@ const productController = {
 		products.forEach(obj => {
 			if (obj.id == req.params.id) {
 				
-				obj.name = req.body.name;
-				obj.price = req.body.price;
-				obj.discount = req.body.discount;
-				obj.description = req.body.description;
+				obj.nombre = req.body.nombre;
+				obj.precio = req.body.precio;				
+				obj.descripcion = req.body.descripcion;
 				obj.category = req.body.category;
 				obj.image = req.file.filename;
 			}
 		});
+		console.log(products)
 		let changeProduct = JSON.stringify(products, null, '  ');
 		fs.writeFileSync(productsFilePath, changeProduct);
 		res.redirect('/products');
