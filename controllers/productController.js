@@ -42,15 +42,13 @@ const productController = {
     editProduct: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		products.forEach(obj => {
-			if (obj.id == req.params.id) {
-				
 				obj.Nombre = req.body.Nombre;
 				obj.Precio = req.body.Precio;				
 				obj.Descripcion = req.body.Descripcion;
 				obj.Category = req.body.Category;
 				obj.Image = req.file.filename;
 			}
-		});
+		);
 		let changeProduct = JSON.stringify(products, null, '  ');
 		fs.writeFileSync(productsFilePath, changeProduct);
 		res.redirect('/products');
