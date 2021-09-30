@@ -12,6 +12,10 @@ const usersController = {
     login : (req,res) => {
         res.render ('login')
     },
+	loginProcess : (req,res) => {
+		letUserToLogin
+		return res.send(req.body);
+	},
     registrateUser: (req, res) => {
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 		let errors = validationResult(req);
