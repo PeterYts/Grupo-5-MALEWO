@@ -166,5 +166,13 @@
     "user-password": "",
     "Image": "Image-1632977689331-382430305.png",
     "id": 21
+  },
+  {
+    "name": "awdawd",
+    "email": "pedroytsma@gmail.com",
+    "tel": "+5491155271083",
+    "password": "$2a$12$DQaOHdjQHrxiB2ciKvm7reOLOAvjkN672foSg2iAfzMIrNWWjEMXC",
+    "Image": "Image-1633019416872-578872986.png",
+    "id": 22
   }
 ]
