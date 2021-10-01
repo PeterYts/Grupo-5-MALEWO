@@ -42,7 +42,7 @@ let validationLogin = [
 
 router.get('/register', usersController.register)
 router.get('/login' , usersController.login );
-router.post('/login/',validationLogin, usersController.loginProcess)
+router.post('/login',validationLogin, usersController.loginProcess)
 router.post('/register/', upload.single('Image'), validationsRegister, usersController.registrateUser)
 
 module.exports = router;
