@@ -7,9 +7,9 @@
         <section class="form-section">
             <form action="/products/<%= wantedProduct[0].id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <label for="name">Nombre del producto</label>
-                <input type="text" name="Nombre" id="name" placeholder=" <%= wantedProduct[0].Nombre %>">
+                <input type="text" name="Nombre" id="name" value=" <%= wantedProduct[0].Nombre %>">
                 <label for="description" >Descripción</label>
-                <input type="text" name="Descripcion" id="description" placeholder=" <%= wantedProduct[0].Descripcion %>">
+                <input type="text" name="Descripcion" id="description" value=" <%= wantedProduct[0].Descripcion %>">
                 <label for="img">Imagenes</label>
                 <input type="file" name="Image" id="img" accept=".jpg, .png, .jpeg, .tif, .tiff" multiple class="file-input">
                 <label for="category">Categoría</label>
@@ -19,8 +19,8 @@
                     <option value="exterior">EXTERIOR</option>                    
                     
                 </select>
-                <label for="price"placeholder=" <%= wantedProduct[0].Precio %>">Precio</label>
-                <input type="text" name="Precio" id="price" placeholder=" <%= wantedProduct[0].Precio %>">
+                <label for="price"value=" <%= wantedProduct[0].Precio %>">Precio</label>
+                <input type="text" name="Precio" id="price" value=" <%= wantedProduct[0].Precio %>">
                 <button type="submit">modificar</button>
             </form>
         </section>

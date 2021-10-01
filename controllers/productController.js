@@ -40,13 +40,23 @@ const productController = {
 		res.redirect('/');
     },
     editProduct: (req, res) => {
+		let idProduct = parseInt(req.params.id);
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		products.forEach(obj => {
+			if(obj.id === idProduct) {
 				obj.Nombre = req.body.Nombre;
 				obj.Precio = req.body.Precio;				
 				obj.Descripcion = req.body.Descripcion;
 				obj.Category = req.body.Category;
-				obj.Image = req.file.filename;
+				if (req.file) {
+					let indexProduct = products.findIndex(obj => obj.id === idProduct);
+					let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
+					fs.unlink(imagePath, function (err) {
+						if (err) throw err;
+					});
+					product.image = req.file.filename;
+					}
+				}
 			}
 		);
 		let changeProduct = JSON.stringify(products, null, '  ');
