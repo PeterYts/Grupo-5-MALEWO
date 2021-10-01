@@ -6,14 +6,15 @@
             <div class="style-bar1"></div>
         </section>
         <section class="form-section">
-            <form class="form">
-                <label for="email" class="form-item">Email</label>
-                <input type="email" id="email" name="email" class="form-item">
-                <label for="password" class="form-item">Contraseña</label>
-                <input type="password" id="password" name="password" class="form-item">
-                <a href="/retrieve-Acount" class="form-item">¿Has olvidado tu contraseña?</a>
-                <a href="/register" class="form-item">Registrarse</a>
-                <button type="submit" class="form-item">Iniciar Sesión</button>
+            <form action="/login/" method="POST" enctype="multipart/form-data" class="form">
+                <label for="email" >Email</label>
+                <input type="email" name="email" id="email">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="pasw">
+
+                <a href="/retrieve-Acount" >¿Has olvidado tu contraseña?</a>
+                <a href="/register" >Registrarse</a>
+                <button type="submit" >Iniciar Sesión</button>
             </form>
         </section>
     </main>
