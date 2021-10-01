@@ -15,12 +15,17 @@ const usersController = {
         res.render ('login')
     },
 	loginProcess: (req,res) => {
-	 	const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+	 	
 	 	let errors = validationResult(req);
+		let userToLogin = User.findByField('email', req.body.email);
 	 	if (errors.isEmpty()) {
-			 console.log(req.body.email)
-	 		let userToLogin = User.findByField('Email', req.body.email);
-	 		res.send(userToLogin)
+			 let passSi = bcrypt.compareSync(req.body.password, userToLogin.password);
+			 console.log (passSi)
+			 if (passSi){
+				 return res.send('Adentro')
+			 }
+	 		
+	 		else res.render('login', {errors: {email: {msg: 'Las credenciales son inválidas'}}})
 
 
 	 	 }else res.render('login', {errors: errors.mapped(), old: req.body})
