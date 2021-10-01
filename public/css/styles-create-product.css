@@ -13,10 +13,14 @@ main {
     margin-top: 20px;
 }
 
+
 .form-section form {
     display: flex;
     flex-direction: column;
+    
+    
 }
+
 
 input {
     margin-top: 8px;
@@ -51,8 +55,12 @@ button {
         margin-top: 110px;
     }
     .form-section form {
-        align-items: center;
+        margin-left: 30%;
+        align-items: flex-start;
+
+    
     }
+    
     input {
         width: 60%;
     }

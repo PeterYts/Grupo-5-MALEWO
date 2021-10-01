@@ -12,8 +12,13 @@
                 <input type="text" name="Descripcion" id="Descripcion">
                 <label for="Image">Imagenes</label>
                 <input type="file" name="Image" id="Image" accept=".jpg, .png, .jpeg, .tif, .tiff" multiple class="file-input">
-                <label for="Category">Categoría</label>
-                <input type="text" name="Category" id="Category">
+                <label for="category">Categoría</label>
+                <select name="category" id="category">
+
+                    <option value="interior">INTERIOR </option>
+                    <option value="exterior">EXTERIOR</option>                    
+                    
+                </select>
                 <label for="Precio">Precio</label>
                 <input type="text" name="Precio" id="Precio">
                 <button type="submit">Crear</button>
