@@ -1,6 +1,6 @@
 const fs = require('fs')
 const User = {
-    fileName: './data/Usuarios.json',
+    fileName: './data/usuarios.json',
     
   
     getData: function () {
@@ -22,4 +22,5 @@ const User = {
  
 
 }
+
 module.exports = User

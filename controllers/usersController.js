@@ -15,18 +15,16 @@ const usersController = {
         res.render ('login')
     },
 	loginProcess: (req,res) => {
-		res.send(req.body)
-	// 	const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-	// 	let errors = validationResult(req);
-	// 	console.log(req.body)
-
-	// 	if (errors.isEmpty()) {
-	// 		let userToLogin = User.findByField('email', req.body.email);
-	// 		console.log (userToLogin)
+	 	const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+	 	let errors = validationResult(req);
+	 	if (errors.isEmpty()) {
+			 console.log(req.body.email)
+	 		let userToLogin = User.findByField('Email', req.body.email);
+	 		res.send(userToLogin)
 
 
-	// 	 }//else res.render('login', {errors: errors.mapped(), old: req.body})
-	// 	 else console.log(req.body)
+	 	 }else res.render('login', {errors: errors.mapped(), old: req.body})
+	 	 
 	 },
     registrateUser: (req, res) => {	
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
