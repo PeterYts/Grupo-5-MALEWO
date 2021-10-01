@@ -28,7 +28,6 @@ const usersController = {
 		 else console.log(req.body)
 	},
     registrateUser: (req, res) => {	
-		console.log (req.body)
         const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 		let errors = validationResult(req);
 		if (errors.isEmpty()) {
