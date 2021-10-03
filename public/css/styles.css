@@ -305,7 +305,7 @@ article p{
 .article-hover:hover img{
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
-article:hover p{
+.article-hover:hover p{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 

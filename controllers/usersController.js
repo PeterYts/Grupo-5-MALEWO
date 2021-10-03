@@ -12,6 +12,7 @@ const usersController = {
         res.render ('register')
     },
     login : (req,res) => {
+		console.log(req.session)
         res.render ('login')
     },
 	loginProcess: (req,res) => {
@@ -20,9 +21,11 @@ const usersController = {
 		let userToLogin = User.findByField('email', req.body.email);
 	 	if (errors.isEmpty()) {
 			 let passSi = bcrypt.compareSync(req.body.password, userToLogin.password);
-			 console.log (passSi)
+			 
 			 if (passSi){
-				 return res.send('Adentro')
+				 delete userToLogin.password
+				 req.session.userLogged = userToLogin;
+				 return res.redirect('profile')
 			 }
 	 		
 	 		else res.render('login', {errors: {email: {msg: 'Las credenciales son inválidas'}}})
@@ -52,7 +55,12 @@ const usersController = {
 		}else 
 			//res.send(errors.mapped());
 			res.render('register', {errors: errors.mapped(), old: req.body});
-    }
+    },
+	profile: (req,res) => {
+		console.log('LLEGATE')
+		console.log(req.session)
+		res.render('loginProfile', {user : req.session.userLogged})
+	}
 }
 
 module.exports = usersController

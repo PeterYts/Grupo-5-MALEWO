@@ -1,0 +1,17 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 103px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.container {
+    align-items: center;
+}    
+.profile-photo img {
+    width: 20%;
+
+    display: flex;
+    align-items: center;
+
+}

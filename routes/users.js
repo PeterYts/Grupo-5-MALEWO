@@ -39,7 +39,7 @@ let validationLogin = [
     .notEmpty().withMessage('Este campo es obligatorio').bail()
 
 ]
-
+router.get('/profile', usersController.profile)
 router.get('/register', usersController.register)
 router.get('/login' , usersController.login );
 router.post('/login',validationLogin, usersController.loginProcess)

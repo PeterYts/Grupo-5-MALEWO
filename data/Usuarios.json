@@ -166,5 +166,29 @@
     "password": "$2a$12$OmLjtdjgJluEp8kawYsTse0kF.j.Y0ADQoawLh928/78uUm8SCdRG",
     "Image": "Image-1633109385814-227454881.jpg",
     "id": 21
+  },
+  {
+    "name": "joaquin",
+    "email": "joaquinspuches@hotmail.com",
+    "tel": "12345678901234",
+    "password": "$2a$12$vblMgtDfpuXDQxj945EoweMx2L3fEHePJEP9IktuyM4uLVLbt09/C",
+    "Image": "Image-1633121706033-482185348.jpg",
+    "id": 22
+  },
+  {
+    "name": "joaquin ",
+    "email": "spuchesjoaquin@gmail.com",
+    "tel": "011546919992938",
+    "password": "$2a$12$piDhv/BPgSaftdKAbJ99EOIbb8xA7hPXcJWgAZ0hSKNh9ukXuNc2K",
+    "Image": "Image-1633272237162-149665146.jpg",
+    "id": 23
+  },
+  {
+    "name": "joaquin",
+    "email": "invitado123@gmail.com",
+    "tel": "12345678901234",
+    "password": "$2a$12$M.3.t336gzYgIo3MQACt1.BxrT3vHT7y.HroPiYs2rm64gJ63wmfe",
+    "Image": "Image-1633272304328-862848383.jpg",
+    "id": 24
   }
 ]
