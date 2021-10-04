@@ -42,7 +42,7 @@ main {
     display: none;
 }
 
-div {
+.product-list div{
     margin-bottom: 10px;
 }
 
