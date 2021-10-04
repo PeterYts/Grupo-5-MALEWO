@@ -19,6 +19,9 @@ router.get('/', productController.index);
 router.get('/create', productController.create);
 router.post('/', upload.single('Image'), productController.createProduct);
 
+router.get('/managment', productController.managment);
+router.post('/managment', productController.managmentResponse);
+
 router.get('/product/:id', productController.product);
 
 router.get('/product/:id/edit', productController.edit);

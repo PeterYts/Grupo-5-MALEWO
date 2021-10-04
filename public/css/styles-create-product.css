@@ -5,7 +5,7 @@ main {
 }
 
 .title-section {
-    margin-top: 150px;
+    margin-top: 100px;
     text-align: center;
 }
 
@@ -50,21 +50,27 @@ button {
     color: #FFFFFF;
 }
 
+.select{
+    width: 100%;
+}
+
 @media (min-width: 1000px) {
     .title-section {
-        margin-top: 110px;
+        margin-top: 130px;
     }
     .form-section form {
-        margin-left: 30%;
         align-items: flex-start;
-
-    
+        margin-left: 30%;
     }
-    
     input {
         width: 60%;
     }
     button {
         width: 10%;
+        position: relative;
+        right: 20.3%;
+    }
+    .select{
+        width: 60%;
     }
 }

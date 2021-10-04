@@ -63,6 +63,23 @@ const productController = {
 		fs.writeFileSync(productsFilePath, changeProduct);
 		res.redirect('/products/');
     },
+	managment: (req, res) => {
+		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+		res.render('productManagment', {products: products});
+	},
+	managmentResponse: (req, res) => {
+		if (req.body.action == 'edit') {
+			res.redirect('/products/product/' + req.body.id + '/edit');
+		} else if (req.body.action == 'delete') {
+			let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+			products = products.filter(obj => (obj.id == req.body.id)? false : true);
+			let changeProduct = JSON.stringify(products, null, '  ');
+			fs.writeFileSync(productsFilePath, changeProduct);
+			res.redirect('/products/managment');
+		} else {
+			res.send('error')
+		}
+	},
     deleteProduct: (req,res) => {
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		products = products.filter(obj => (obj.id == req.params.id)? false : true);
