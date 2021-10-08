@@ -190,5 +190,13 @@
     "password": "$2a$12$M.3.t336gzYgIo3MQACt1.BxrT3vHT7y.HroPiYs2rm64gJ63wmfe",
     "Image": "Image-1633272304328-862848383.jpg",
     "id": 24
+  },
+  {
+    "name": "mac buc",
+    "email": "awda@gmail.com",
+    "tel": "+5491155271083",
+    "password": "$2a$12$Z1g6begZmf3RjzXbt2EJbe/I7/mPFsldeZpN5LZZIP3hviVEGavBa",
+    "Image": "Image-1633669373322-826461991.jpg",
+    "id": 25
   }
 ]
