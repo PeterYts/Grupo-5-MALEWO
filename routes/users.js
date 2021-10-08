@@ -4,6 +4,8 @@ var router = express.Router();
 const usersController = require("../controllers/usersController");
 const multer = require('multer');
 const { check } = require('express-validator')
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 const storage = multer.diskStorage({ 
     destination: 'public/img/userImg', 
@@ -33,15 +35,15 @@ let validationsRegister = [
 ];
 let validationLogin = [
   check('email')
-  .notEmpty().withMessage('Este campo es obligatorio').bail()
+  .notEmpty().withMessage('Este campo es obligatorio').bail() 
   .isEmail().withMessage('Este campo debe ser un Email'),
-  check('password')
+  check('password') 
     .notEmpty().withMessage('Este campo es obligatorio').bail()
 
 ]
-router.get('/profile', usersController.profile)
-router.get('/register', usersController.register)
-router.get('/login' , usersController.login );
+router.get('/profile', authMiddleware,usersController.profile)
+router.get('/register',guestMiddleware, usersController.register)
+router.get('/login' ,guestMiddleware, usersController.login );
 router.post('/login',validationLogin, usersController.loginProcess)
 router.post('/register/', upload.single('Image'), validationsRegister, usersController.registrateUser)
 
