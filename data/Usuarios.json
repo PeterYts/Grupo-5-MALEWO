@@ -190,13 +190,5 @@
     "password": "$2a$12$M.3.t336gzYgIo3MQACt1.BxrT3vHT7y.HroPiYs2rm64gJ63wmfe",
     "Image": "Image-1633272304328-862848383.jpg",
     "id": 24
-  },
-  {
-    "name": "joaqui",
-    "email": "joaquin@hotmail.com",
-    "tel": "12345678901234",
-    "password": "$2a$12$fYL1lwOENOdfXvpgH.kriuGsSkmrjlYdJRbjCTR/PFZKldTlis8kS",
-    "Image": "Image-1633655096453-310459487.jpg",
-    "id": 25
   }
 ]

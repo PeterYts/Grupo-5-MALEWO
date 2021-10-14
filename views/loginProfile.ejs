@@ -1,25 +1,18 @@
 <%- include('./partials/head', { title:'Blog', hojaCss:'styles-profile'}) %>
 <%- include('./partials/header') %>
 <main>
-    
-<div class="container" style="margin-top: 40px;">
-        <div>
-            <h2>Hola <%= user.name %> </h2>
-        </div>
-  
-        <div class="profile-photo">
-
-         
+        <section class="name-picture">
+            <h2>Hola <%= user.name %>!</h2>
             <img src="/img/userImg/<%= user.Image %>  ">
-            <br>
-            <br>
-         
-        </div>
-        <div>
-            <h3>Email : <%= user.email %> </h3>
-        </div>
-   
-</div>
+        </section>
+        <div class="style-bar1"></div>
+        <section class="main-info">
+            <h3>Email: <%= user.email %> </h3>
+            <h3>tel: <%= user.tel %></h3>
+            <a href="/compras" class="button-link">
+                <button><i class="fas fa-shopping-bag"></i></button>
+            </a>
+        </section>
 </main>
 
 <%- include('./partials/footer') %> 
