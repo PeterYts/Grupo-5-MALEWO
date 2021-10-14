@@ -18,11 +18,13 @@
             <a href="/" style="text-decoration: none;">
                 <h1>CASA MALEWO</h1>
             </a>
+            <% if (locals.isLogged) { %> 
             <div class="carrito">
                 <a href="/compras">
                     <i class="fas fa-shopping-bag"></i>
                 </a>
             </div>
+            <% }else { %>
            
         </div>
         <div class="inicio-sesion">
@@ -36,6 +38,7 @@
                 </li>>
             </ul>
         </div>
+        <% } %>
         <div class="barra">
             
                 <ul class="nav-ul">

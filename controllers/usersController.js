@@ -25,6 +25,10 @@ const usersController = {
 			 if (passSi){
 				 delete userToLogin.password
 				 req.session.userLogged = userToLogin;
+				 if(req.body.remember_user){
+					 console.log('ttt')
+					 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+				 }
 				 return res.redirect('profile')
 			 }
 	 		
@@ -62,8 +66,14 @@ const usersController = {
     },
 	profile: (req,res) => {
 		console.log('LLEGATE')
+		console.log(req.cookies.userEmail)
 		console.log(req.session)
 		res.render('loginProfile', {user : req.session.userLogged})
+	},
+	logout:(req,res) => {
+		req.session.detroy();
+		return res.redirect('/login')
+
 	}
 }
 
