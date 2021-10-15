@@ -18,27 +18,42 @@
             <a href="/" style="text-decoration: none;">
                 <h1>CASA MALEWO</h1>
             </a>
-            <% if (locals.isLogged) { %> 
+            <% if (locals.isLogged) { %>                
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../../logo.png" width="40" style="border-radius: 100%;">
+                                Hi User
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/profile">My profile</a>
+                                <li><hr class="dropdown-divider"></li>
+                                <a class="dropdown-item" href="/logout">Logout</a>
+                            </ul>
+                        </li>
             <div class="carrito">
                 <a href="/compras">
                     <i class="fas fa-shopping-bag"></i>
                 </a>
             </div>
-            <% }else { %>
+            <% } %>
            
         </div>
         <div class="inicio-sesion">
             <ul class="login-ul">
+                <% if (locals.isLogged) { %> 
+
+                <li>
+                    <a href="/compras"><i class="fas fa-shopping-bag header-icon"></i></a>
+                </li>>
+                <% }else { %>
                 <li>
                     <i class="far fa-user-circle header-icon"></i>
                     <a href="/login"> INICIAR SESIÓN</a>
                 </li>
-                <li>
-                    <a href="/compras"><i class="fas fa-shopping-bag header-icon"></i></a>
-                </li>>
+                <% } %>
+                
             </ul>
         </div>
-        <% } %>
         <div class="barra">
             
                 <ul class="nav-ul">

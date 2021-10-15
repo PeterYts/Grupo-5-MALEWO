@@ -71,8 +71,9 @@ const usersController = {
 		res.render('loginProfile', {user : req.session.userLogged})
 	},
 	logout:(req,res) => {
-		req.session.detroy();
-		return res.redirect('/login')
+		res.clearCookie('userEmail');
+		req.session.destroy();
+		return res.redirect('/');
 
 	}
 }

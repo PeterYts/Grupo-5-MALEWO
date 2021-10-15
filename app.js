@@ -20,11 +20,11 @@ app.use(session({
     resave: false,
     saveUninitialized:false,   
 }))
-app.use(userLoggedMiddleware)
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
+app.use(userLoggedMiddleware)
 app.use('/', users);
 app.use("/", indexRouter);
 app.use('/products', productRouter );

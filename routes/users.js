@@ -44,7 +44,7 @@ let validationLogin = [
 router.get('/profile', authMiddleware,usersController.profile)
 router.get('/register',guestMiddleware, usersController.register)
 router.get('/login' ,guestMiddleware, usersController.login );
-router.get('/login', usersController.logout)
+router.get('/logout', usersController.logout);
 router.post('/login',validationLogin, usersController.loginProcess)
 router.post('/register/', upload.single('Image'), validationsRegister, usersController.registrateUser)
 
