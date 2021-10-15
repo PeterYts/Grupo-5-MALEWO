@@ -7,6 +7,7 @@ const users = require('./routes/users');
 const indexRouter = require("./routes");
 const productRouter = require('./routes/product');
 const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -23,6 +24,7 @@ app.use(userLoggedMiddleware)
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(cookieParser());
 app.use('/', users);
 app.use("/", indexRouter);
 app.use('/products', productRouter );

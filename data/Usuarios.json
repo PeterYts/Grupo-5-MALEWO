@@ -198,5 +198,13 @@
     "password": "$2a$12$fJJhdFCZnVMwQhLLADDR2.QYxLEiqQ8dOuHlBHahmgQ5Kp.mlqxn6",
     "Image": "Image-1634249773705-806761826.jpeg",
     "id": 25
+  },
+  {
+    "name": "awdawd",
+    "email": "pedroytsma@gmail.com",
+    "tel": "+5491155271083",
+    "password": "$2a$12$XPsraSNUJItWIR7MJWY9LuPdv5NJ12Josy/9Bi271We9RftGDvH.2",
+    "Image": "Image-1634271606053-311989417.jpg",
+    "id": 26
   }
 ]
