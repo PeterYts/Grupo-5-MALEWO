@@ -39,5 +39,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {});
 
+    Product.associate = (models) => {
+        
+    }
+
     return Product;
 }

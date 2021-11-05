@@ -16,6 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `buyerdata`
+--
+
+DROP TABLE IF EXISTS `buyerdata`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `buyerdata` (
+  `id` varchar(100) NOT NULL,
+  `nameSurname` varchar(100) NOT NULL,
+  `cardNumber` bigint(20) unsigned NOT NULL,
+  `expirationMonth` int(10) unsigned NOT NULL,
+  `expirationYear` int(10) unsigned NOT NULL,
+  `securityCode` int(10) unsigned NOT NULL,
+  `DNI` bigint(20) unsigned NOT NULL,
+  `userId` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `buyerData_FK` (`userId`),
+  CONSTRAINT `buyerData_FK` FOREIGN KEY (`userId`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `buyerdata`
+--
+
+LOCK TABLES `buyerdata` WRITE;
+/*!40000 ALTER TABLE `buyerdata` DISABLE KEYS */;
+/*!40000 ALTER TABLE `buyerdata` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categories`
 --
 
@@ -168,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-04 17:19:10
+-- Dump completed on 2021-11-04 22:50:32
