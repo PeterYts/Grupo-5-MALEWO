@@ -18,16 +18,21 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER       
         },
         img: {
+            allowNull: false,
             type: dataTypes.STRING
         },
         password: {
+            allowNull: false,
             type: dataTypes.STRING
         },
         createdAt: {
-            type: dataTypes.DATE
+            allowNull: false,
+            type: dataTypes.DATE,
+            defaultValue: Sequelize.NOW
         },
         updatedAt: {
-            type: dataTypes.DATE
+            type: dataTypes.DATE,
+            defaultValue: null
         }
              
     });
