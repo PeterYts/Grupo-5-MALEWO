@@ -1,12 +1,13 @@
-const { DataTypes } = require("sequelize/types");
-const { sequelize, Sequelize } = require(".");
+//const { DataTypes } = require("sequelize/types");
+//const { sequelize, Sequelize } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
-    const product = sequelize.define('Product', {
+    const Product = sequelize.define('Products', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         name: {
             type: DataTypes.STRING,
@@ -38,5 +39,5 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {});
 
-    return product;
+    return Product;
 }
