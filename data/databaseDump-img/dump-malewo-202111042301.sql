@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `buyerdata`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `buyerdata` (
-  `id` varchar(100) NOT NULL,
+  `id` int(10) unsigned NOT NULL,
   `nameSurname` varchar(100) NOT NULL,
   `cardNumber` bigint(20) unsigned NOT NULL,
   `expirationMonth` int(10) unsigned NOT NULL,
@@ -199,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-04 22:50:32
+-- Dump completed on 2021-11-04 23:01:44
