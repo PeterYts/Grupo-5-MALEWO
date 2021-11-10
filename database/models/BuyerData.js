@@ -1,6 +1,7 @@
 //const { DataTypes } = require("sequelize/types");
 //const { sequelize, Sequelize } = require(".");
 
+
 module.exports = (sequelize, DataTypes) => {
     const BuyerData = sequelize.define('BuyerData', {
         id: {
@@ -38,6 +39,13 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     })
+
+    BuyerData.associate = (models) => {
+        BuyerData.belongsTo(models.User, {
+            as: 'users',
+            foreignKey: 'userId'
+        })
+    }
 
     return BuyerData
 }

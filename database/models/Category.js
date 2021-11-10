@@ -1,4 +1,5 @@
-
+//const { DataTypes } = require("sequelize/types");
+//const { sequelize, Sequelize } = require(".");
 
 module.exports = (sequelize,dataTypes)=>{
     const Category = sequelize.define('Categories', {
@@ -16,5 +17,13 @@ module.exports = (sequelize,dataTypes)=>{
             type: dataTypes.TEXT
         }
     });
+
+    Category.associate = (models) => {
+        Category.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'categoryId'
+        })
+    }
+
     return Category
 }
