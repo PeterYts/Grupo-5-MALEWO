@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         createdAt: {
             type: DataTypes.DATE,
             allowNull: false,
-            defaultValue: Sequelize.NOW
+            defaultValue: sequelize.NOW
         },
         updatedAt: {
             type: DataTypes.DATE,
@@ -40,12 +40,12 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
 
     Product.associate = (models) => {
-        Product.belongsTo(models.Category, {
+        Product.belongsTo(models.Categories, {
             as: 'category',
             foreignKey: 'categoryId'
         })
 
-        Product.belongsToMany(models.Order, {
+        Product.belongsToMany(models.Orders, {
             as: 'orders',
             through: 'OrderProduct',
             foreignKey: 'orderId',

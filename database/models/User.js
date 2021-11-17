@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) =>{
         createdAt: {
             allowNull: false,
             type: dataTypes.DATE,
-            defaultValue: Sequelize.NOW
+            defaultValue: sequelize.NOW
         },
         updatedAt: {
             type: dataTypes.DATE,
@@ -44,7 +44,7 @@ module.exports = (sequelize, dataTypes) =>{
             foreignKey: 'userId'
         })
 
-        User.hasMany(models.Order, {
+        User.hasMany(models.Orders, {
             as: 'order',
             foreignKey: 'userId'
         })

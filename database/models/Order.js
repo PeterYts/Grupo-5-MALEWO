@@ -24,11 +24,11 @@ module.exports = (sequelize, DataTypes) => {
     }, {})
 
     Order.associate = (models) => {
-        Order.belongsTo(models.User, {
+        Order.belongsTo(models.Users, {
             as: 'user',
             foreignKey: 'userId'
         })
-        Order.belongsToMany(models.Product, {
+        Order.belongsToMany(models.Products, {
             as: 'products',
             through: 'OrderProduct',
             foreignKey: 'productId',

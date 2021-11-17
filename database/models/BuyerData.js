@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     BuyerData.associate = (models) => {
-        BuyerData.belongsTo(models.User, {
+        BuyerData.belongsTo(models.Users, {
             as: 'users',
             foreignKey: 'userId'
         })
