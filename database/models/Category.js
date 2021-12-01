@@ -15,7 +15,9 @@ module.exports = (sequelize,dataTypes)=>{
         description: {
             allowNull: false,
             type: dataTypes.TEXT
-        }
+        },
+    },{
+        timestamps: false
     });
 
     Category.associate = (models) => {

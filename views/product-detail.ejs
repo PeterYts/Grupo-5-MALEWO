@@ -3,18 +3,18 @@
     <main>
         <section class="main-section">
             <article class="support-img">
-                <img src="/img/productos/<%= prod[0].Image %>" alt="support-img" class="support-img-ind">
-                <img src="/img/productos/<%= prod[0].Image %>" alt="support-img" class="support-img-ind">
+                <img src="/img/productos/<%= prod.img %>" alt="support-img" class="support-img-ind">
+                <img src="/img/productos/<%= prod.img %>" alt="support-img" class="support-img-ind">
             </article>
             <article class="main-img-article">
-                <img src="/img/productos/<%= prod[0].Image %>" alt="main-img" class="main-img">
+                <img src="/img/productos/<%= prod.img %>" alt="main-img" class="main-img">
             </article>
             <article class="info-buy-article">
                 <div>
-                    <h3><%= prod[0].Nombre %></h3>
-                    <p class="description"><%= prod[0].Descripcion %></p>
-                    <p class="category"><%= prod[0].Category %> </p>
-                    <p class="price"><%= prod[0].Precio %></p>
+                    <h3><%= prod.name %></h3>
+                    <p class="description"><%= prod.description %></p>
+                    <p class="category"><%= prod.category.name %> </p>
+                    <p class="price"><%= prod.Price %></p>
                 </div>
                 <div>
                     <form>

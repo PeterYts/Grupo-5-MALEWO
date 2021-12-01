@@ -5,22 +5,23 @@
             <h2>Modificar Producto</h2>
         </section>
         <section class="form-section">
-            <form action="/products/<%= wantedProduct[0].id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/products/<%= wantedProduct.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <label for="name">Nombre del producto</label>
-                <input type="text" name="Nombre" id="name" value=" <%= wantedProduct[0].Nombre %>">
+                <input type="text" name="Nombre" id="name" value=" <%= wantedProduct.name %>">
                 <label for="description" >Descripción</label>
-                <input type="text" name="Descripcion" id="description" value=" <%= wantedProduct[0].Descripcion %>">
+                <input type="text" name="Descripcion" id="description" value=" <%= wantedProduct.description %>">
                 <label for="img">Imagenes</label>
                 <input type="file" name="Image" id="img" accept=".jpg, .png, .jpeg, .tif, .tiff" multiple class="file-input">
                 <label for="category">Categoría</label>
                 <select name="category" id="category" class="select">
+                    <% for (let i = 0; i < categories.length; i++) {  %> 
 
-                    <option value="interior">INTERIOR </option>
-                    <option value="exterior">EXTERIOR</option>                    
-                    
+                        <option value="<%= categories[i].id %> "> <%= categories[i].name %>  </option>
+                      
+                            <% } %> 
                 </select>
-                <label for="price"value=" <%= wantedProduct[0].Precio %>">Precio</label>
-                <input type="text" name="Precio" id="price" value=" <%= wantedProduct[0].Precio %>">
+                <label for="Price">Precio</label>
+                <input type="text" name="Price" id="Price" value=" <%= wantedProduct.Price %>">
                 <button type="submit">modificar</button>
             </form>
         </section>
