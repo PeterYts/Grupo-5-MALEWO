@@ -24,10 +24,10 @@ let validationsRegister = [
   check('email')
     .notEmpty().withMessage('Este campo es obligatorio').bail()
     .isEmail().withMessage('Este campo debe ser un Email'),
-  check('tel')
+  check('phone')
     .notEmpty().withMessage('Este campo es obligatorio').bail()
     .isNumeric().withMessage('Ingrese num de telefono valido').bail()
-    .isLength({min: 14}, {max: 15}),
+    .isLength({min: 13}, {max: 15}),
   check('password')
     .notEmpty().withMessage('Este campo es obligatorio').bail()
     .isLength({max: 16}).withMessage('maximo 16 caracteres').bail()
@@ -45,7 +45,10 @@ router.get('/profile', authMiddleware,usersController.profile)
 router.get('/register',guestMiddleware, usersController.register)
 router.get('/login' ,guestMiddleware, usersController.login );
 router.get('/logout', usersController.logout);
+router.get('/userEdit/:id', usersController.edit)
 router.post('/login',validationLogin, usersController.loginProcess)
 router.post('/register/', upload.single('Image'), validationsRegister, usersController.registrateUser)
+router.delete('/deleteUser/:id', usersController.deleteUser)
+router.put('/userUpdate/:id', upload.single('Image'), validationsRegister, usersController.update)
 
 module.exports = router;
