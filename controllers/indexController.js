@@ -5,9 +5,6 @@ const indexController = {
     productos : (req,res) => {
         res.render ('products')
     },
-    compras : (req, res) => {
-        res.render('compras');
-    },
     info: (req, res) => {
         res.render('quienes-somos');
     },

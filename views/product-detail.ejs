@@ -17,7 +17,7 @@
                     <p class="price"><%= prod.Price %></p>
                 </div>
                 <div>
-                    <form>
+                    <form action="/saveProductToCart/<%= prod.id %>" method="POST">
                         <div class="quantity">
                             <label>Cantidad</label>
                             <select name="quantity">
@@ -28,7 +28,7 @@
                                 <option value="5">5</option>
                             </select>
                         </div>
-                        <button type="submit">COMPRAR</button>
+                        <button type="submit">AÑADIR AL CARRITO</button>
                     </form>
                 </div>
             </article>

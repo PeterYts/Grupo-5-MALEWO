@@ -22,6 +22,7 @@ const usersController = {
 				if (passSi){
 					delete userToLogin.password
 					req.session.userLogged = userToLogin;
+					req.session.cart = []
 					if(req.body.remember_user){
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
 					}

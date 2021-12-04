@@ -61,7 +61,7 @@ const productController = {
 			description: req.body.Descripcion,
 			img: req.file.filename,
 			categoryId: req.body.category,
-			Price: req.body.Price , 
+			Price: req.body.Precio , 
 
 
 		})
