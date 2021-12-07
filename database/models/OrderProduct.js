@@ -15,6 +15,8 @@ module.exports = (sequelize, dataTypes)=>{
             type: dataTypes.INTEGER,
             allowNull:false
         }
+    }, {
+        timestamps: false
     })
 
     return OrderProduct

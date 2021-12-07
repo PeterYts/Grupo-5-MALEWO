@@ -1,10 +1,16 @@
+const session = require('express-session');
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models')
 
 const cartController = {
     compras : (req, res) => {
-        res.render('compras');
+        let products = req.session.cart
+        let totalPrice = 0;
+        req.session.cart.forEach((product) => {
+            totalPrice += product.productFound.Price * product.quantity;
+        })
+        res.render('compras', {products: products, total: totalPrice});
     },
     saveProduct: (req, res) => {
         db.Products.findByPk(req.params.id).then((product) => {
@@ -18,8 +24,27 @@ const cartController = {
                     quantity
                 })
                 console.log(req.session.cart);
-                res.redirect('/compras')
+                res.redirect('/products')
         })
+    },
+    confirmedBuy: (req, res) => {
+        if(req.session.cart == undefined) {
+            res.send('error')
+        }else {
+            const order = new db.Orders({
+                total: 0,
+                userId: req.session.userLogged.id
+            })
+            req.session.cart.forEach((product) => {
+                order.total += product.productFound.Price * product.quantity;
+                order.addProduct(product.productFound.id);
+            })
+            order.save();
+            // db.Orders.create({
+            //     total: lastPrice,
+            //     userId: req.session.userLogged.id,
+            // })
+        }
     }
 }
 

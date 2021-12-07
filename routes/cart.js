@@ -5,6 +5,7 @@ const cartController = require("../controllers/cartController");
 
 router.get('/compras', cartController.compras);
 router.post('/saveProductToCart/:id', cartController.saveProduct);
+router.post('/confirmedBuy', cartController.confirmedBuy)
 
 
 

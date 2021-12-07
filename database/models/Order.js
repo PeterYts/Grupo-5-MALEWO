@@ -16,12 +16,10 @@ module.exports = (sequelize, DataTypes) => {
         userId: {
             type: DataTypes.INTEGER,
             allowNull: false
-        },
-        deliverAdress: {
-            type: DataTypes.STRING,
-            allowNull: false
         }
-    }, {})
+    }, {
+        timestamps: false
+    })
 
     Order.associate = (models) => {
         Order.belongsTo(models.Users, {
@@ -30,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
         })
         Order.belongsToMany(models.Products, {
             as: 'products',
-            through: 'OrderProduct',
+            through: 'OrderProducts',
             foreignKey: 'productId',
             otherKey: 'orderId',
             timestamps: false
