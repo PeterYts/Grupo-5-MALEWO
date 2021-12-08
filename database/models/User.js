@@ -1,10 +1,5 @@
 module.exports = (sequelize, dataTypes) =>{
     const User = sequelize.define('Users', {
-        id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type:dataTypes.INTEGER
-        },
         name: {
             allowNull: false,
             type: dataTypes.STRING,
@@ -26,17 +21,7 @@ module.exports = (sequelize, dataTypes) =>{
         password: {
             allowNull: false,
             type: dataTypes.STRING
-        },
-        createdAt: {
-            allowNull: false,
-            type: dataTypes.DATE,
-            defaultValue: sequelize.NOW
-        },
-        updatedAt: {
-            type: dataTypes.DATE,
-            defaultValue: null
-        }
-             
+        }    
     });
 
     User.associate = (models) => {

@@ -3,12 +3,6 @@
 
 module.exports = (sequelize, DataTypes) => {
     const Order = sequelize.define('Orders', {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-            allowNull: false
-        },
         total: {
             type: DataTypes.INTEGER,
             allowNull: false
@@ -17,9 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         }
-    }, {
-        timestamps: false
-    })
+    }, {})
 
     Order.associate = (models) => {
         Order.belongsTo(models.Users, {
@@ -27,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'userId'
         })
         Order.belongsToMany(models.Products, {
-            through: "ProductsOrders",
+            through: models.ProductsOrders,
         })
     }
 

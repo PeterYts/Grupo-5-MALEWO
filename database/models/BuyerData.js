@@ -4,12 +4,6 @@
 
 module.exports = (sequelize, DataTypes) => {
     const BuyerData = sequelize.define('BuyerData', {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-            allowNull: false
-        },
         nameSurname: {
             type: DataTypes.STRING,
             allowNull: false

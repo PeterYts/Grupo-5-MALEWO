@@ -35,18 +35,23 @@ const cartController = {
                 total: 0,
                 userId: req.session.userLogged.id
             })
-            const product = await db.Products.findByPk(1)
-            order.save();
-            order.addProducts(product);
-            // req.session.cart.forEach((product) => {
-            //     order.total += product.productFound.Price * product.quantity;
-            //     order.addProducts(product.productFound.id);
-            // })
-            // order.save();
-            // db.Orders.create({
-            //     total: lastPrice,
-            //     userId: req.session.userLogged.id,
-            // })
+            await order.save()
+            let ids = [];
+            let products = {};
+            req.session.cart.forEach((product) => {
+                if (ids.includes(product.productFound.id)) {
+                    products[product.productFound.id] += Number(product.quantity)
+                }else {
+                    ids.push(product.productFound.id);
+                    products[product.productFound.id] = Number(product.quantity)
+                }
+                order.total += product.productFound.Price * Number(product.quantity)
+            })
+            for ( const product in products) {
+                order.addProducts(product, {through: {quantity: products[product]}});
+            }
+            await order.save()
+            res.send('funciona');
         }
     }
 }
