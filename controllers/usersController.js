@@ -5,7 +5,30 @@ const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const User = require('../models/User');
 
+
 const usersController = {
+	list: (req,res) => {
+		
+		db.Users.findAll()
+			.then(users => {return res.json({
+				count: users.length,
+				
+				data: users
+
+			
+			})
+		})
+	},
+	show: (req,res) => {
+		db.Users.findByPk(req.params.id)
+			.then(user => {return res.json({
+				
+				data: user,
+
+			
+			})
+		})
+	},
     register : (req,res) => {
         res.render ('register')
     },

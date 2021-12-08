@@ -13,6 +13,28 @@ const productController = {
 		})
 
 	},
+	list: (req,res) => {
+		
+		db.Products.findAll()
+			.then(products => {return res.json({
+				count: products.length,
+				
+				data: products
+
+			
+			})
+		})
+	},
+	show: (req,res) => {
+		db.Products.findByPk(req.params.id)
+			.then(product => {return res.json({
+				
+				data: product,
+
+			
+			})
+		})
+	},
     product: (req,res) => { 
 		
         db.Products.findByPk(req.params.id, {

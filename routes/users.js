@@ -42,6 +42,8 @@ let validationLogin = [
 
 ]
 router.get('/profile', authMiddleware,usersController.profile)
+router.get('/users/list', usersController.list)
+router.get('/users/list/:id', usersController.show)
 router.get('/register',guestMiddleware, usersController.register)
 router.get('/login' ,guestMiddleware, usersController.login );
 router.get('/logout', usersController.logout);
