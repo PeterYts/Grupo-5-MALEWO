@@ -68,7 +68,9 @@ const productController = {
 		res.redirect('/');
     },
     editProduct: (req, res) => {
-		
+		// let errors = validationResult(req);
+		// let updatedProduct = req.body;
+		// updatedProduct['img'] = req.file.filename
 		db.Products.update({
 			name: req.body.Nombre,
 			description: req.body.Descripcion,
