@@ -3,12 +3,6 @@
 
 module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define('Products', {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-            allowNull: false
-        },
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -27,15 +21,6 @@ module.exports = (sequelize, DataTypes) => {
         Price: {
             type: DataTypes.INTEGER,
             allowNull: false
-        },
-        createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: sequelize.NOW
-        },
-        updatedAt: {
-            type: DataTypes.DATE,
-            defaultValue: null
         }
     }, {});
 
@@ -46,11 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         })
 
         Product.belongsToMany(models.Orders, {
-            as: 'orders',
-            through: 'OrderProduct',
-            foreignKey: 'orderId',
-            otherKey: 'productId',
-            timestamps: false
+            through: models.ProductsOrders,
         })
     }
 
