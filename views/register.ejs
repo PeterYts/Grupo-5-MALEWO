@@ -21,6 +21,7 @@
                 <% } %>
                 <label for="Image">Imagen de Perfil</label>
                 <input type="file" name="Image" id="Image" accept=".jpg, .png, .jpeg, .tif, .tiff" class="file-input">
+                <div id="imagePreview"></div>
                 <label for="tel">Número de Teléfono</label>
                 <input class= '<%= locals.errors && errors.phone ? "error-border": ""%>' type="tel" id="tel" name="phone" value="<%= locals.old && old.phone %>">
                 <% if (locals.errors && errors.phone) { %>
@@ -37,7 +38,7 @@
     </main>
 <%- include('./partials/footer') %> 
     <script src="../js/prueba.js"></script>
-    <script src="../js/formValidation.js"></script>
+    <script src="../js/formValidationRegister.js"></script>
 </body>
 
 </html>

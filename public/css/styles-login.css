@@ -28,6 +28,16 @@ main {
     margin-left: 5%;
     margin-right: 5%;
 }
+.ok {
+    color: #000000;
+}
+
+.notOk {
+    color: red
+}
+.error-border {
+    border: solid 1px red;
+}
 
 label {
     margin-bottom: 10px;

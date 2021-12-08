@@ -109,19 +109,20 @@ const productController = {
 		// fs.writeFileSync(productsFilePath, changeProduct);
 		// res.redirect('/products/');
     // },
-	managment: (req, res) => {
-		const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+	managment: async (req, res) => {
+		const products = await db.Products.findAll()
 		res.render('productManagment', {products: products});
 	},
-	managmentResponse: (req, res) => {
+	managmentResponse: async (req, res) => {
 		if (req.body.action == 'edit') {
 			res.redirect('/products/product/' + req.body.id + '/edit');
 		} else if (req.body.action == 'delete') {
-			let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-			products = products.filter(obj => (obj.id == req.body.id)? false : true);
-			let changeProduct = JSON.stringify(products, null, '  ');
-			fs.writeFileSync(productsFilePath, changeProduct);
-			res.redirect('/products/managment');
+			db.Products.destroy({
+				where: {
+					id: req.body.id
+				}
+			})
+			res.redirect('/products')
 		} else {
 			res.send('error')
 		}

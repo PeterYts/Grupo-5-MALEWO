@@ -64,6 +64,14 @@ button {
     border: solid 1px red;
 }
 
+.ok {
+    color: #000000;
+}
+
+.notOk {
+    color: red
+}
+
 @media(min-width: 542px){
     .logo-img{
         display:block

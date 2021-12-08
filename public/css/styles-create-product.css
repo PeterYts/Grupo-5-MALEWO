@@ -54,6 +54,17 @@ button {
     width: 100%;
 }
 
+.ok {
+    color: #000000;
+}
+
+.notOk {
+    color: red
+}
+.error-border {
+    border: solid 1px red;
+}
+
 @media (min-width: 1000px) {
     .title-section {
         margin-top: 130px;

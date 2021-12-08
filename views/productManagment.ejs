@@ -9,7 +9,7 @@
         <% products.forEach(prod => {%>
             <div class="product-list">
                 <div class="name-buttons">
-                    <%= prod.Nombre %>
+                    <%= prod.name %>
                     <form action="/products/managment" method="POST">
                         <button type="submit" name="action" value="edit">Editar</button>
                         <button type="submit" name="action" value="delete">Borrar</button>
