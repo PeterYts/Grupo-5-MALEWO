@@ -27,7 +27,7 @@ const cartController = {
                 res.redirect('/products')
         })
     },
-    confirmedBuy: (req, res) => {
+    confirmedBuy: async (req, res) => {
         if(req.session.cart == undefined) {
             res.send('error')
         }else {
@@ -35,11 +35,14 @@ const cartController = {
                 total: 0,
                 userId: req.session.userLogged.id
             })
-            req.session.cart.forEach((product) => {
-                order.total += product.productFound.Price * product.quantity;
-                order.addProduct(product.productFound.id);
-            })
+            const product = await db.Products.findByPk(1)
             order.save();
+            order.addProducts(product);
+            // req.session.cart.forEach((product) => {
+            //     order.total += product.productFound.Price * product.quantity;
+            //     order.addProducts(product.productFound.id);
+            // })
+            // order.save();
             // db.Orders.create({
             //     total: lastPrice,
             //     userId: req.session.userLogged.id,
