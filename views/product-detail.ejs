@@ -13,8 +13,8 @@
                 <div>
                     <h3><%= prod.name %></h3>
                     <p class="description"><%= prod.description %></p>
-                    <p class="category"><%= prod.category.name %> </p>
-                    <p class="price"><%= prod.Price %></p>
+                    <p class="category"> categoría: <%= prod.category.name %> </p>
+                    <p class="price"> Precio: <%= prod.Price %></p>
                 </div>
                 <div>
                     <form action="/saveProductToCart/<%= prod.id %>" method="POST">

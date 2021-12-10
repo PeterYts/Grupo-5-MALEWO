@@ -71,6 +71,10 @@ main section article {
     margin-top: 5px;
 }
 
+.category {
+    font-weight: bold;
+}
+
 form {
     display: flex;
     flex-direction: row;
