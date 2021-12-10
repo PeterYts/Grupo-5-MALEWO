@@ -16,13 +16,25 @@ const productController = {
 	list: (req,res) => {
 		
 		db.Products.findAll()
-			.then(products => {return res.json({
-				count: products.length,
-				
-				data: products
-
+			.then(products => {
+				var exterior = products.filter((task) => task.categoryId == 1 );
+				var interior = products.filter((task) => task.categoryId == 2 );
+				var accesorios = products.filter((task) => task.categoryId == 3 );
 			
-			})
+				
+				let respuesta ={
+					count: products.length,
+					countByCategory: {EXTERIOR: exterior.length,
+						INTERIOR: interior.length,
+						ACCESORIOS: accesorios.length}
+						
+	
+				,
+					data: products
+	
+				
+				}
+				return res.json(respuesta)
 		})
 	},
 	show: (req,res) => {
