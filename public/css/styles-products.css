@@ -114,6 +114,10 @@ a:hover{
     transform: translateX(0%);
 }
 
+a {
+    color: black;
+}
+
 @media (max-width: 542px){
     .lista-filtros{
        position: fixed;
