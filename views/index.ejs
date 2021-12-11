@@ -43,21 +43,12 @@
             </section>
 
             <section class="destacados">
-                <!-- <h2>DESTACADOS </h2> -->
-
+                <% rooster.forEach(product => { %>
                 <article class="article-hover">
-                    <img src="img\img-home\Screenshot_20.png" alt="maceta1">
-                    <p>INTERIOR</p>
+                    <a href="/products/product/<%= product.id %>"><img src="img\productos\<%= product.img %>" alt="maceta1"></a>
+                    <p><%= product.name %></p>
                 </article>
-                <article class="article-hover">
-                    <img src="img\img-home\Screenshot_20.png" alt="maceta1">
-                    <p>INTERIOR</p>
-                </article>
-                <article class="article-hover">
-                    <img src="img\img-home\Screenshot_20.png" alt="maceta1">
-                    <p>INTERIOR</p>
-                </article>
-
+                <% }) %>
             </section>
 
         </main>

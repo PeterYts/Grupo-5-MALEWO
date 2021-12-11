@@ -1,8 +1,10 @@
 const path = require('path')
+const db = require('../database/models')
 
 const indexController = {
-    home: (req, res) => {
-      res.render("index");
+    home: async (req, res) => {
+    let productRooster = await db.Products.findAll({limit: 3});
+      res.render("index", {rooster: productRooster});
     },
     productos : (req,res) => {
         res.render ('products')
