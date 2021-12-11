@@ -33,7 +33,6 @@ const usersController = {
         res.render ('register')
     },
     login : (req,res) => {
-		console.log(req.session)
         res.render ('login')
     },
 	loginProcess: (req,res) => {

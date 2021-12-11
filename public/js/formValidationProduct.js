@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
     function  lastValidation () {
         if(finalName.value.length > 4) {
          }else {
-            errors.push('El nombre de usuario debe tener al menos 5 caracteres');
+            errors.push('El nombre del producto debe tener al menos 5 caracteres');
          }
          if(finalDesc.value.length >= 20) {
          }else {

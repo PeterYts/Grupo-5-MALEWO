@@ -1,47 +1,44 @@
 <%- include('./partials/head', { title:'Carrito', hojaCss:'styles-compras'}) %>
 
 <%- include('./partials/header') %>
-    <main style="margin-top: 95px;">
-
+    <main>
         <section class="titulo">
             <h2 class="title-line">MI COMPRA </h2>
         </section>
         <section class="lista-compras">
-       
-        <% products.forEach(product => { %>
-            <section class="compra">
-                <h2 class="title-line-grey"></h2>
-                <div class="producto">
-                    <div class="product-name-icon">
-                        <div class="item-carro">
-                            <img src="img\productos\<%= product.productFound.img %>" alt="">
-                            <h4><%= product.productFound.name %></h4>
-                        </div>
-                        <div class="titles-box">
-                            <div class="precio-cantidad">
-                                <div class="precio-unitario">
-                                <p>PRECIO UNITARIO</p>
-                                <p class="precioU" style="margin-bottom: 15px;"><%= product.productFound.Price %></p>
+            <section class="products">
+                <% products.forEach(product => { %>
+                    <h2 class="title-line-grey"></h2>
+                    <section class="compra">
+                        <div class="producto">
+                            <div class="product-name-icon">
+                                <div class="item-carro">
+                                    <img src="img\productos\<%= product.productFound.img %>" alt="">
+                                    <h3><%= product.productFound.name %></h3>
                                 </div>
-                                <div class="cantidad">
-                                <p>CANTIDAD</p>
-                                <i class="fas fa-minus-circle"></i>
-                                <input type="number" name="quantity[595099420]" data-item-id="595099420" value="<%= product.quantity %>"
-                                class="js-cart-quantity-input cart-item-input form-control">
-                                <i class="fas fa-plus-circle"></i>
+                                <div class="titles-box">
+                                    <div class="precio-cantidad">
+                                        <div class="precio-unitario">
+                                        <p>PRECIO UNITARIO</p>
+                                        <p class="precioU" style="margin-bottom: 15px;"><%= product.productFound.Price %></p>
+                                        </div>
+                                        <div class="cantidad">
+                                        <p>CANTIDAD</p>
+                                        <div class="cantidadNum">
+                                            <p class="cantidadNum"><%= product.quantity %></p>
+                                        </div>
+                                        <div class="cross">
+                                            <i id="cross" class="fas fa-times"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cross">
-                            <i id="cross" class="fas fa-times"></i>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="title-line-grey"></h2>
+                    </section>
+                    <h2 class="title-line-grey"></h2>
+                    <% }) %>
             </section>
-            <% }) %>
             <section class="shop-box">
-                <div class="resumen">
                     <div class="resumen-de-compras">
                         <h3>RESUMEN DE COMPRA</h3>
                         <section class="titulo" style="padding-top: 0px;">
@@ -55,17 +52,14 @@
                             <div class="totales" style="margin-bottom: 53px;">
                                 <p style="font-weight: bold;">TOTAL</p>
                                 <p>$<%= total %></p>
-
                             </div>
                         </div>
+                        <form action="/confirmedBuy" method="POST">
+                            <button class="buyBtn">COMPRAR</button>
+                        </form>
                     </div>
-                </div>
-                <form action="/confirmedBuy" method="POST">
-                    <button> COMPRAR </button>
-                </form>
             </section>
         </section>
-        <h2 class="title-line-grey" style="position: relative;bottom: 82px;"></h2>
 
     </section>
     </main>

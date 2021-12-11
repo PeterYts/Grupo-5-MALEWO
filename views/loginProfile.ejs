@@ -3,11 +3,11 @@
 <main>
         <section class="name-picture">
             <h2>Hola <%= user.name %>!</h2>
-            <img src="/img/userImg/<%= user.img %>  ">
+            <img src="/img/userImg/<%= user.img %>  " class="prfImg">
         </section>
         <div class="style-bar1"></div>
         <section class="main-info">
-            <h3>Email: <%= user.email %> </h3>
+            <h3 class="email">Email:</h3> <p> <%= user.email %></p>
             <h3>tel: +<%= user.phone %></h3>
             <a href="/compras" class="button-link">
                 <button><i class="fas fa-shopping-bag"></i></button>
@@ -16,7 +16,7 @@
                 <button>Editar</button>
             </a>
             <form action="/deleteUser/<%= user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-                <button type="submit"> Eliminar Perfil</button>
+                <button type="submit" class="deleteBtn"> Eliminar Perfil</button>
             </form>
         </section>
 </main>

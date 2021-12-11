@@ -12,20 +12,21 @@ main {
     margin-right: 5%;
 }
 
-.style-bar1 {
+.style-barA {
     height: 1px;
     background: black;
     display: inline-block;
     width: 54%;
     margin-top: 20px;
     margin-left: 5px;
+    margin-bottom: 30px;
 }
 
-.style-bar2 {
+.style-barB {
     height: 1px;
     background: #8B8D8A;
     display: inline-block;
-    width: 54%;
+    width: 75%;
     margin-left: 0%;
 }
 
@@ -46,9 +47,13 @@ main {
     margin-bottom: 10px;
 }
 
+form {
+    display: inline;
+    margin-left: 20px;
+}
+
 button {
     width: 15%;
-    height: 20px;
     font-family: 'Poppins', sans-serif;
     background-color: #000000;
     color: #FFFFFF;
@@ -56,7 +61,7 @@ button {
 }
 
 footer {
-    margin-top: 100px;
+    margin-top: 160px;
 }
 
 @media(min-width: 542px){
@@ -70,5 +75,8 @@ footer {
     }
     form {
         width: 70%;
+    }
+    .style-barB {
+        width: 54%;
     }
 }
