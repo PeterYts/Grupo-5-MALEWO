@@ -153,7 +153,7 @@ const productController = {
 		if (req.body.action == 'edit') {
 			res.redirect('/products/product/' + req.body.id + '/edit');
 		} else if (req.body.action == 'delete') {
-			db.Products.destroy({
+			 await db.Products.destroy({
 				where: {
 					id: req.body.id
 				}
