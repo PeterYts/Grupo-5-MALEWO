@@ -179,6 +179,8 @@ form {
         display: inline-block;
         cursor: pointer;
         font-size: 20px;
+        background: none;
+        border: none;
     }
     #cross:hover {
         color: #8B8D8A;
@@ -210,8 +212,7 @@ form {
     .resumen-de-compras {
         height: 300px;
         margin-left: 50px;
-        width: 27%;
-        position: fixed;
+        width: 80%;
     }
  }
 @media (min-width: 1000px){

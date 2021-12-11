@@ -27,9 +27,9 @@
                                         <div class="cantidadNum">
                                             <p class="cantidadNum"><%= product.quantity %></p>
                                         </div>
-                                        <div class="cross">
-                                            <i id="cross" class="fas fa-times"></i>
-                                        </div>
+                                        <form action="/deleteItemFromCart/<%= product.productFound.id %>" method="post" class="cross">
+                                            <button type="submit" id="cross"><i class="fas fa-times"></i></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
