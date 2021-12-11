@@ -7,11 +7,32 @@ const db = require('../database/models')
 
 
 const productController = {
-	index: (req, res) => {	
-		db.Products.findAll()
-			.then(products => {res.render('products', {productList: products})
-		})
-
+	index: async (req, res) => {	
+		let products;
+		let user;
+		if (req.query.cat == 1) {
+			products = await db.Products.findAll({where: {
+				categoryId: 1
+			}})
+		}else if (req.query.cat == 2) {
+			products = await db.Products.findAll({where: {
+				categoryId: 2
+			}})
+		}else if (req.query.cat == 3) {
+			products = await db.Products.findAll({where: {
+				categoryId: 3
+			}})
+		}else {
+			products = await db.Products.findAll({
+				include:[{association:'category'}]
+			})
+		}
+		if (req.session.userLogged.isAdmin == 1) {
+			res.render('products', {productList: products, confirmation: true})
+		}else {
+			res.render('products', {productList: products, confirmation: false})
+		}
+		
 	},
 	list: (req,res) => {
 		
@@ -47,12 +68,13 @@ const productController = {
 			})
 		})
 	},
-    product: (req,res) => { 
+    product: async (req,res) => { 
 		
-        db.Products.findByPk(req.params.id, {
+        let wantedProduct = await db.Products.findByPk(req.params.id, {
 			include:[{association:'category'}]
 		})
-			.then(wantedProduct => res.render ('product-detail', {prod: wantedProduct}))
+		let productRooster = await db.Products.findAll({limit: 4});
+		res.render ('product-detail', {prod: wantedProduct, productRooster: productRooster});
 		
 		
     },
@@ -101,11 +123,11 @@ const productController = {
 		})
 		res.redirect('/');
     },
-    editProduct: (req, res) => {
+    editProduct: async (req, res) => {
 		// let errors = validationResult(req);
 		// let updatedProduct = req.body;
 		// updatedProduct['img'] = req.file.filename
-		db.Products.update({
+		await db.Products.update({
 			name: req.body.Nombre,
 			description: req.body.Descripcion,
 			img: req.file.filename,
@@ -153,7 +175,7 @@ const productController = {
 		if (req.body.action == 'edit') {
 			res.redirect('/products/product/' + req.body.id + '/edit');
 		} else if (req.body.action == 'delete') {
-			db.Products.destroy({
+			 await db.Products.destroy({
 				where: {
 					id: req.body.id
 				}

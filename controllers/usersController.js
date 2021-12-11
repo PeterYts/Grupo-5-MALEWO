@@ -69,7 +69,8 @@ const usersController = {
 						email: req.body.email,
 						img: req.file.filename,
 						phone: req.body.phone,
-						password: password
+						password: password,
+						isAdmin: 0,
 					})
 					res.redirect('/');
 				}else 

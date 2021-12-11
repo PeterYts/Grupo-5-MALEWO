@@ -18,13 +18,14 @@ const cartController = {
             let quantity = req.body.quantity
             if (req.session.userLogged == undefined) {
                 res.redirect('/login')
-            }else 
+            }else {
                 req.session.cart.push({
                     productFound,
                     quantity
                 })
                 console.log(req.session.cart);
                 res.redirect('/products')
+            }
         })
     },
     confirmedBuy: async (req, res) => {
@@ -53,6 +54,12 @@ const cartController = {
             await order.save()
             res.send('funciona');
         }
+    },
+    deleteItemFromCart: (req, res) => {
+        let newCart = req.session.cart.filter(item => item.productFound.id != req.params.id);
+        req.session.cart = newCart
+        console.log(req.session.cart);
+        res.redirect('/compras');
     }
 }
 
