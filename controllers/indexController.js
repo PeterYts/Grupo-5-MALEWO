@@ -1,3 +1,5 @@
+const path = require('path')
+
 const indexController = {
     home: (req, res) => {
       res.render("index");
@@ -10,6 +12,9 @@ const indexController = {
     },
     blog : (req, res) => {
         res.render('blog');
+    },
+    dashboard: (req, res) => {
+        res.sendFile(path.join(__dirname, '../react-dashboard/build/index.html'));
     }
 }
 
