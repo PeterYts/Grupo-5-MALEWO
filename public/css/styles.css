@@ -41,7 +41,6 @@ h2, h3, h4{
     right: 20px;
     position: absolute;
     top: 0px
-    
 }
 
 header .header-social-icons i {
@@ -118,6 +117,10 @@ header div.top-header div.burger div{
 
 .header-icon {
     font-size: 1rem;
+    transition: color 300ms;
+}
+.header-icon:hover {
+    color: #DADDD9;
 }
 
 .fa-user-circle {
@@ -313,7 +316,7 @@ article p{
 button {
     cursor: pointer;
     overflow: hidden;
-    transition: background-color 0.5s ease-in 100ms;
+    transition: background-color 300ms;
 }
 button:hover {
     background-color: #8B8D8A;

@@ -29,7 +29,13 @@
                     <li class="categoryLink"> <a href="/products"> TODOS</a></li>
                 </ul>
                 <h2 class="title-line-grey"></h2>
-
+                <% if (confirmation === true) { %>
+                <ul>
+                    <li class="categoryLink"><a href="/products/create">CREAR PRODUCTO</a></li>
+                    <li class="categoryLink"><a href="/products/managment">GESTION DE PRODUCTOS</a></li>
+                </ul>
+                <h2 class="title-line-grey"></h2>
+                <%} else %>
             </div>
             <div class="lista-de-productos">
                 <% productList.forEach(prod => { %>

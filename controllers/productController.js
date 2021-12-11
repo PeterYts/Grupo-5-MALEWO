@@ -9,6 +9,7 @@ const db = require('../database/models')
 const productController = {
 	index: async (req, res) => {	
 		let products;
+		let user;
 		if (req.query.cat == 1) {
 			products = await db.Products.findAll({where: {
 				categoryId: 1
@@ -26,7 +27,12 @@ const productController = {
 				include:[{association:'category'}]
 			})
 		}
-		res.render('products', {productList: products})
+		if (req.session.userLogged.isAdmin == 1) {
+			res.render('products', {productList: products, confirmation: true})
+		}else {
+			res.render('products', {productList: products, confirmation: false})
+		}
+		
 	},
 	list: (req,res) => {
 		
