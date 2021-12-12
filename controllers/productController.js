@@ -27,12 +27,16 @@ const productController = {
 				include:[{association:'category'}]
 			})
 		}
-		if (req.session.userLogged.isAdmin == 1) {
-			res.render('products', {productList: products, confirmation: true})
-		}else {
-			res.render('products', {productList: products, confirmation: false})
+		if(req.session.userlogged){
+			if (req.session.userLogged.isAdmin == 1) {
+				res.render('products', {productList: products, confirmation: true})
+			}else {
+				res.render('products', {productList: products, confirmation: false})
+			}
+			
+		}else{
+			res.render('products',{productList: products, confirmation: false} )		
 		}
-		
 	},
 	list: (req,res) => {
 		
@@ -176,7 +180,7 @@ const productController = {
 			res.redirect('/products/product/' + req.body.id + '/edit');
 		} else if (req.body.action == 'delete') {
 			 await db.Products.destroy({
-				where: {
+ 				where: {
 					id: req.body.id
 				}
 			})

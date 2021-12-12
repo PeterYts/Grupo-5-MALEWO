@@ -7,7 +7,15 @@ li {
     font-family: 'Poppins', sans-serif; 
     list-style: none;
 }
-
+.font{
+    font-family: 'Poppins', sans-serif; 
+}
+.user-bar{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
 h1{
     font-family: 'Antonio', sans-serif;
     color: white;

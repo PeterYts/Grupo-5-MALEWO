@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-var session = require('express-session')
-const fs = require('fs');
-const path = require('path');
-const {validationResult} = require('express-validator');
-const bcrypt = require('bcryptjs');
-const db = require('../database/models');
 
-const indexController = {
-    home: (req, res) => {
-    console.log(req.session)
-      res.render("index", {user : req.session.userLogged});
-=======
 const path = require('path')
 const db = require('../database/models')
 
@@ -18,10 +6,12 @@ const indexController = {
     home: async (req, res) => {
     let productRooster = await db.Products.findAll({limit: 3});
       res.render("index", {rooster: productRooster});
->>>>>>> 2aa513e65f6c1288d7a58001a0ef954729a6586e
+
     },
     productos : (req,res) => {
-        res.render ('products')
+        // res.render ('products')
+        res.render('loginProfile', {user : req.session.userLogged})
+            
     },
     info: (req, res) => {
         res.render('quienes-somos');

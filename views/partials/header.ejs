@@ -20,7 +20,7 @@
             </a>
             
             <% if (locals.isLogged) { %>                
-                       
+  
             <div class="carrito">
                 <a href="/compras">
                     <i class="fas fa-shopping-bag"></i>
@@ -28,7 +28,7 @@
             </div>
             <% } else { %>
                 <div class="carrito">
-                <a href="/compras">
+                <a href="/login">
                     <i class="fas fa-shopping-bag"></i>
                 </a>
             </div>
@@ -54,21 +54,23 @@
         </div>
         <div class="barra">
             
-            
                 <ul class="nav-ul">
-                    <div class='user-bar'>
-                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    
+                    <% if (locals.isLogged) { %> 
+                      <div class='user-bar font'>
+                      
+                            <a class="font" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/img/userImg/" width="40" style="border-radius: 100%;">
                                 Hi User
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="font" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profile">My profile</a>
                                 <li><hr></li>
                                 <a class="dropdown-item" href="/logout">Logout</a>
                             </ul>
-                        </li>
+                   
                     </div>
+                    <% } %>
                     <li>
                         <a href="/" class="a-inicio">INICIO</a>
                     </li>
