@@ -43,6 +43,19 @@
                 <li>
                     <a href="/compras"><i class="fas fa-shopping-bag header-icon"></i></a>
                 </li>>
+                <div class='user-bar user-bar-pc font'>
+                      
+                    <!-- <a class="font" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/img/userImg/" width="40" style="border-radius: 100%;">
+                        Hi User
+                    </a> -->
+                    <ul class="font " aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/profile">My profile</a>
+                        <li><hr></li>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </ul>
+           
+            </div>
                 <% }else { %>
                 <li>
                     <i class="far fa-user-circle header-icon"></i>
@@ -57,15 +70,15 @@
                 <ul class="nav-ul">
                     
                     <% if (locals.isLogged) { %> 
-                      <div class='user-bar font'>
+                      <div class='user-bar-celu user-bar font'>
                       
-                            <a class="font" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- <a class="font" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/img/userImg/" width="40" style="border-radius: 100%;">
                                 Hi User
-                            </a>
+                            </a> -->
                             <ul class="font" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="/profile">My profile</a>
-                                <li><hr></li>
+                                <li style='padding-right: 12px;'><hr></li>
                                 <a class="dropdown-item" href="/logout">Logout</a>
                             </ul>
                    

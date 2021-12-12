@@ -387,6 +387,12 @@ footer section p {
 .casa-malewo {
     margin-left: 10%;
 }
+.user-bar{
+    justify-content: flex-end;
+    width: 100%;
+    
+}
+
 
 
 @media (max-width:542px){
@@ -419,6 +425,14 @@ footer section p {
     .logo-img{
         display:block
     }
+    .user-bar-celu{
+        display: none;
+
+    }
+    .user-bar-pc{
+        display: block;
+    }
+    
     .nav-ul{
         display: flex;
         position: relative;
