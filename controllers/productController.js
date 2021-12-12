@@ -27,7 +27,7 @@ const productController = {
 				include:[{association:'category'}]
 			})
 		}
-		if(req.session.userlogged){
+		if(req.session.userLogged){
 			if (req.session.userLogged.isAdmin == 1) {
 				res.render('products', {productList: products, confirmation: true})
 			}else {
