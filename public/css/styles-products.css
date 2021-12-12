@@ -117,6 +117,9 @@ a:hover{
 a {
     color: black;
 }
+.ul-side {
+    padding-left: 20%;
+}
 
 @media (max-width: 542px){
     .lista-filtros{
