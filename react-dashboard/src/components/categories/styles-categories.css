@@ -34,11 +34,23 @@ li {
     margin-bottom: 5%;
 }
 
+.titleDrop {
+    font-size: 19px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin-left: 2%;
+}
+
 p {
     text-align: center;
     font-size: 15px;
     margin-bottom: 5%;
     display: none;
+}
+
+.new-p{
+    display: inline-block;
 }
 
 i {
