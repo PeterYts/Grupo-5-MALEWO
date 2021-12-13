@@ -158,12 +158,11 @@ a {
     }
     .lista-filtros{
         display: block;
-        position: fixed;
-        
+
         
     }
     .catalogo{
-        justify-content: flex-end   ;
+        justify-content: space-between  ;
     }
     .lista-de-productos{
         width: 70%;
@@ -173,7 +172,7 @@ a {
     }
     .buscador{
         display: block;
-        position:fixed;
+     
     }
 
 
@@ -191,15 +190,10 @@ a {
     .buscador{
         margin-left: 10%;
     }
-    .lista-filtros{
-        margin-left: 134px;
-    }
-
+  
 
 }
 
 @media(min-width: 1600px){
-    .lista-filtros{
-        margin-left: 189px;
-    }
+  
 }
