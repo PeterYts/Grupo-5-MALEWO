@@ -10,22 +10,38 @@ const usersController = {
 	list: (req,res) => {
 		
 		db.Users.findAll()
-			.then(users => {return res.json({
+			.then(users => {
+				let usersNew = [];
+				users.forEach(user => {
+					let secureUser = {
+						id: user.id,
+						name: user.name,
+						email: user.email,
+						phone: user.phone,
+						img: 'img/userImg/' + user.img
+					}
+					usersNew.push(secureUser);
+				})
+				return res.json({
 				count: users.length,
-				
-				data: users
-
-			
+				data: usersNew
 			})
 		})
 	},
 	show: (req,res) => {
 		db.Users.findByPk(req.params.id)
-			.then(user => {return res.json({
+			.then(user => {
 				
-				data: user,
-
-			
+				let secureUser = {
+					id: user.id,
+					name: user.name,
+					email: user.email,
+					phone: user.phone,
+					img: 'img/userImg/' + user.img
+				}
+				
+				return res.json({
+				data: secureUser,
 			})
 		})
 	},
