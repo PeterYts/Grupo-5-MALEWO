@@ -38,9 +38,12 @@ const productController = {
 			res.render('products',{productList: products, confirmation: false} )		
 		}
 	},
-	list: (req,res) => {
+	list: async (req,res) => {
 		
-		db.Products.findAll()
+		let categories = await db.Categories.findAll();
+		db.Products.findAll({
+			include:[{association:'category'}]
+		})
 			.then(products => {
 
 				var exterior = products.filter((task) => task.categoryId == 1 );
@@ -52,6 +55,7 @@ const productController = {
 						name: product.name,
 						description: product.description,
 						detail: 'localhost:3050/products/list/'+ product.id,
+						category: product.category.name
 
 					}
 					producto.push(productoLindo)
@@ -59,15 +63,13 @@ const productController = {
 				
 				let respuesta ={
 					count: products.length,
+					countCategories: categories.length,
+					categories: categories,
 					countByCategory: {EXTERIOR: exterior.length,
 						INTERIOR: interior.length,
-						ACCESORIOS: accesorios.length}
-						
-	
-				,
+						ACCESORIOS: accesorios.length
+					},
 					data: producto
-	
-				
 				}
 				return res.json(respuesta)
 		})

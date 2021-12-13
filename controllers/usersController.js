@@ -18,7 +18,7 @@ const usersController = {
 						name: user.name,
 						email: user.email,
 						phone: user.phone,
-						img: 'img/userImg/' + user.img
+						img: '/img/userImg/' + user.img
 					}
 					usersNew.push(secureUser);
 				})
@@ -37,7 +37,7 @@ const usersController = {
 					name: user.name,
 					email: user.email,
 					phone: user.phone,
-					img: 'img/userImg/' + user.img
+					img: '/img/userImg/' + user.img
 				}
 				
 				return res.json({

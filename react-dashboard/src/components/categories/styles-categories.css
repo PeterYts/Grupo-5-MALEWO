@@ -41,6 +41,10 @@ p {
     display: none;
 }
 
+i {
+    cursor: pointer;
+}
+
 i:hover {
     color: #DADDD9;
 }

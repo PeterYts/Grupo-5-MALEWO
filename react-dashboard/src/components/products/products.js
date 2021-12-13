@@ -1,7 +1,7 @@
 import React from "react";
 import './styles-products.css';
 
-function products() {
+function Products() {
     return (
         <div className="products">
         <section>
@@ -13,4 +13,4 @@ function products() {
     );
 }
 
-export default products
+export default Products

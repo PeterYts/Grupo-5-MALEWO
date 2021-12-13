@@ -1,7 +1,7 @@
 import React from "react";
 import './styles-users.css';
 
-function users() {
+function Users() {
     return (
         <div className="users">
         <section>
@@ -13,4 +13,4 @@ function users() {
     );
 }
 
-export default users
+export default Users
