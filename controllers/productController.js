@@ -42,10 +42,20 @@ const productController = {
 		
 		db.Products.findAll()
 			.then(products => {
+
 				var exterior = products.filter((task) => task.categoryId == 1 );
 				var interior = products.filter((task) => task.categoryId == 2 );
 				var accesorios = products.filter((task) => task.categoryId == 3 );
-			
+				let producto = []
+				products.forEach(product=> {
+					let productoLindo = {  
+						name: product.name,
+						description: product.description,
+						detail: 'localhost:3050/products/list/'+ product.id,
+
+					}
+					producto.push(productoLindo)
+				})
 				
 				let respuesta ={
 					count: products.length,
@@ -55,7 +65,7 @@ const productController = {
 						
 	
 				,
-					data: products
+					data: producto
 	
 				
 				}
@@ -66,7 +76,7 @@ const productController = {
 		db.Products.findByPk(req.params.id)
 			.then(product => {return res.json({
 				
-				data: product,
+				data: product,	
 
 			
 			})

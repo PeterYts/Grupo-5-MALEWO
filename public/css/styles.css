@@ -192,6 +192,7 @@ header li {
 
 .login-ul {
     padding-left: 0px;
+    justify-content: flex-end;
 }
 
 .main-banner{
@@ -221,6 +222,7 @@ right: 27px;
 }
 .productos-disponibles {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .productos-disponibles article{
@@ -394,8 +396,10 @@ footer section p {
 }
 
 
-
-@media (max-width:542px){
+.top-1{
+    margin-top:60px
+}
+@media (max-width:850px){
     
     .nav-ul{
         transform: translateX(-100%);
@@ -421,7 +425,10 @@ footer section p {
     }
 
 }
-@media(min-width: 542px){
+@media(min-width: 850px){
+    .top-1{
+        margin-top: 0px;
+    }
     .logo-img{
         display:block
     }
@@ -481,6 +488,7 @@ footer section p {
     .productos-disponibles{
         flex-wrap: nowrap;
         padding: 0 10%;
+    
     }
     .destacados {
         display: flex;

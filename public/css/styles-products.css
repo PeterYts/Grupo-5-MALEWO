@@ -121,7 +121,7 @@ a {
     padding-left: 20%;
 }
 
-@media (max-width: 542px){
+@media (max-width: 850px){
     .lista-filtros{
        position: fixed;
        z-index: 1;
@@ -145,7 +145,7 @@ a {
 
 
 
-@media(min-width: 542px){
+@media(min-width: 850px){
     
 .titulo h2{
     margin-left: 23%;
@@ -158,11 +158,12 @@ a {
     }
     .lista-filtros{
         display: block;
-        position: relative;
+        position: fixed;
+        
         
     }
     .catalogo{
-        justify-content: space-between;
+        justify-content: flex-end   ;
     }
     .lista-de-productos{
         width: 70%;
@@ -172,11 +173,12 @@ a {
     }
     .buscador{
         display: block;
+        position:fixed;
     }
 
 
 
-}
+} 
 
 @media(min-width: 1000px){
     .titulo {
@@ -189,6 +191,15 @@ a {
     .buscador{
         margin-left: 10%;
     }
+    .lista-filtros{
+        margin-left: 134px;
+    }
 
 
+}
+
+@media(min-width: 1600px){
+    .lista-filtros{
+        margin-left: 189px;
+    }
 }
