@@ -24,11 +24,11 @@ function bannerLoop () {
         document.querySelector('#imgBanner2').style.opacity = '0';
         setTimeout(() => {
             document.querySelector('#imgBanner1').style.right = '0px';
-            document.querySelector('#imgBanner1').style.zIndex = '1500';
+            document.querySelector('#imgBanner1').style.zIndex = '2000';
             document.querySelector('#imgBanner2').style.right = '-1250px';
             document.querySelector('#imgBanner2').style.zIndex = '100';
             document.querySelector('#imgBanner3').style.right = '1250px';
-            document.querySelector('#imgBanner3').style.zIndex = '2000';
+            document.querySelector('#imgBanner3').style.zIndex = '1500';
         }, 500)
         setTimeout(() => {
             document.querySelector('#imgBanner2').style.opacity = '1';
@@ -39,11 +39,11 @@ function bannerLoop () {
         document.querySelector('#imgBanner3').style.opacity = '0';
         setTimeout(() => {
             document.querySelector('#imgBanner2').style.right = '0px';
-            document.querySelector('#imgBanner2').style.zIndex = '1500';
+            document.querySelector('#imgBanner2').style.zIndex = '2000';
             document.querySelector('#imgBanner3').style.right = '-1250px';
             document.querySelector('#imgBanner3').style.zIndex = '100';
             document.querySelector('#imgBanner1').style.right = '1250px';
-            document.querySelector('#imgBanner1').style.zIndex = '2000';
+            document.querySelector('#imgBanner1').style.zIndex = '1500';
         }, 500)
         setTimeout(() => {
             document.querySelector('#imgBanner3').style.opacity = '1';
@@ -54,11 +54,11 @@ function bannerLoop () {
         document.querySelector('#imgBanner1').style.opacity = '0';
         setTimeout(() => {
             document.querySelector('#imgBanner3').style.right = '0px';
-            document.querySelector('#imgBanner3').style.zIndex = '1500';
+            document.querySelector('#imgBanner3').style.zIndex = '2000';
             document.querySelector('#imgBanner1').style.right = '-1250px';
             document.querySelector('#imgBanner1').style.zIndex = '100';
             document.querySelector('#imgBanner2').style.right = '1250px';
-            document.querySelector('#imgBanner2').style.zIndex = '2000';
+            document.querySelector('#imgBanner2').style.zIndex = '1500';
         }, 500)
         setTimeout(() => {
             document.querySelector('#imgBanner1').style.opacity = '1';
