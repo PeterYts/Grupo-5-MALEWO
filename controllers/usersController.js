@@ -107,6 +107,7 @@ const usersController = {
 		db.Users.destroy({
 			where: {id: req.params.id}
 		})
+		req.session.destroy();
 		res.redirect('/')
 	},
 	edit: (req, res) => {
