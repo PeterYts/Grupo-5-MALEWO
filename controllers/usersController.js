@@ -119,6 +119,8 @@ const usersController = {
 		let errors = validationResult(req);
 		let updatedUser = req.body;
 		updatedUser['img'] = req.file.filename
+		updatedUser['id'] = req.params.id
+		updatedUser['isAdmin'] = req.session.userLogged.isAdmin
 		if (errors.isEmpty()) {
 			let password = bcrypt.hashSync(req.body.password, 12);
 			db.Users.update({
