@@ -52,7 +52,7 @@ const cartController = {
                 order.addProducts(product, {through: {quantity: products[product]}});
             }
             await order.save()
-            res.send('funciona');
+            res.render('compraRealizada');
         }
     },
     deleteItemFromCart: (req, res) => {
