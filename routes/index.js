@@ -8,7 +8,6 @@ router.get('/info', indexController.info );
 router.get('/blog', indexController.blog ) ;
 router.get('/dashboard/', indexController.dashboard);
 router.get('/dashboard', indexController.dashboard);
-router.get('/dashboard/menem', indexController.dashboard);
 
 
 module.exports = router;

@@ -94,8 +94,6 @@ const usersController = {
 		})
     },
 	profile: (req,res) => {
-		console.log(req.cookies.userEmail)
-		console.log(req.session)
 		res.render('loginProfile', {user : req.session.userLogged})
 	},
 	logout:(req,res) => {
@@ -125,7 +123,7 @@ const usersController = {
 				name:req.body.name,
 				email:req.body.email,
 				img:req.file.filename,
-				phone:req.body.phone,
+				phone:Number(req.body.phone),
 				password: password
 			},
 			{
