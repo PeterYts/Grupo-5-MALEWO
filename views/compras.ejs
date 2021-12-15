@@ -45,10 +45,18 @@
                             <h2 class="title-line"></h2>
                         </section>
                         <div class="suma-productos">
-                            <div class="totales">
-                                <p>subtotal</p>
-                                <p>$<%= total %></p>
-                            </div>
+                            <% products.forEach(product => { %>
+                                <div class="totales">
+                                    <p>
+                                        <%= product.productFound.name %>
+                                        x 
+                                        <%= product.quantity %>
+                                    </p>
+                                    <p>
+                                        <%= product.quantity * product.productFound.Price%>
+                                    </p>
+                                </div>
+                            <% }) %>
                             <div class="totales" style="margin-bottom: 53px;">
                                 <p style="font-weight: bold;">TOTAL</p>
                                 <p>$<%= total %></p>

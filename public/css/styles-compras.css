@@ -73,7 +73,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    align-items: flex-start;
 }
 .resumen{
     display: flex;
@@ -81,11 +81,10 @@ main{
     width: 100%;
 }
 .resumen-de-compras{
-    
     background-color: lightgrey;
     width: 100%;
     position: relative;
-
+    padding-bottom: 15px;
 }
 .resumen-de-compras h3{
     bottom: -10px;
@@ -217,9 +216,9 @@ form {
         flex-direction: row;
     }
     .resumen-de-compras {
-        height: 300px;
         margin-left: 50px;
         width: 80%;
+        padding-bottom: 15px;
     }
  }
 @media (min-width: 1000px){

@@ -24,18 +24,16 @@ const cartController = {
                         productFound,
                         quantity
                     })
-                    req.session.ids.push(productFound.id)
                 }else {
-                    req.session.cart.forEach(prod => {
-                        if (req.session.ids.includes(productFound.id) && productFound.id === prod.productFound.id) {
-                            prod.quantity += Number(req.body.quantity)
-                        }else if (!req.session.ids.includes(productFound.id)){
-                            req.session.cart.push({
-                                productFound,
-                                quantity
-                            })
-                        }    
-                    })
+                    const index = req.session.cart.findIndex((prod) => productFound.id === prod.productFound.id)
+                    if (index >= 0) {
+                        req.session.cart[index].quantity += Number(req.body.quantity)
+                    }else {
+                        req.session.cart.push({
+                            productFound,
+                            quantity
+                        })
+                    }
                 }
                 res.redirect('/products')
             }
