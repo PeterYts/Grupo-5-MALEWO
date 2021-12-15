@@ -56,7 +56,6 @@ const usersController = {
 		 db.Users.findOne({where: {email: req.body.email}}).then((userToLogin) => {
 			if (errors.isEmpty()) {
 				let passSi = bcrypt.compareSync(req.body.password, userToLogin.password);
-   
 				if (passSi){
 					userToLogin.password = undefined;
 					req.session.userLogged = userToLogin;
