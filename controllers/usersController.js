@@ -60,9 +60,8 @@ const usersController = {
 				if (passSi){
 					userToLogin.password = undefined;
 					req.session.userLogged = userToLogin;
-					
-					req.session.cart = []
-				
+					req.session.cart = [];
+					req.session.ids = [];	
 					if(req.body.remember_user){
 						res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
 					}
@@ -96,8 +95,6 @@ const usersController = {
 		})
     },
 	profile: (req,res) => {
-		console.log(req.cookies.userEmail)
-		console.log(req.session)
 		res.render('loginProfile', {user : req.session.userLogged})
 	},
 	logout:(req,res) => {

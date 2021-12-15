@@ -5,7 +5,7 @@ const db = require('../database/models')
 
 const cartController = {
     compras : (req, res) => {
-        let products = req.session.cart
+       let products = req.session.cart;
         let totalPrice = 0;
         req.session.cart.forEach((product) => {
             totalPrice += product.productFound.Price * product.quantity;
@@ -15,15 +15,28 @@ const cartController = {
     saveProduct: (req, res) => {
         db.Products.findByPk(req.params.id).then((product) => {
             let productFound = product.dataValues
-            let quantity = req.body.quantity
+            let quantity = Number(req.body.quantity)
             if (req.session.userLogged == undefined) {
                 res.redirect('/login')
             }else {
-                req.session.cart.push({
-                    productFound,
-                    quantity
-                })
-                console.log(req.session.cart);
+                if (req.session.cart.length === 0) {
+                    req.session.cart.push({
+                        productFound,
+                        quantity
+                    })
+                    req.session.ids.push(productFound.id)
+                }else {
+                    req.session.cart.forEach(prod => {
+                        if (req.session.ids.includes(productFound.id) && productFound.id === prod.productFound.id) {
+                            prod.quantity += Number(req.body.quantity)
+                        }else if (!req.session.ids.includes(productFound.id)){
+                            req.session.cart.push({
+                                productFound,
+                                quantity
+                            })
+                        }    
+                    })
+                }
                 res.redirect('/products')
             }
         })
