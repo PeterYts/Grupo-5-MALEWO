@@ -52,3 +52,11 @@ main {
     transform: scale(1.03);
     transform: all 1s ease;
 }
+
+.fakeBtn {
+    transition: background-color 300ms;
+}
+
+.fakeBtn:hover {
+    background-color: #8B8D8A;
+}

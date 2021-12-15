@@ -125,7 +125,7 @@ const usersController = {
 				name:req.body.name,
 				email:req.body.email,
 				img:req.file.filename,
-				phone:Number(req.body.phone),
+				phone:req.body.phone,
 				password: password
 			},
 			{
